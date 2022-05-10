@@ -1,7 +1,6 @@
 <html>
   <title>萬年曆作業</title>
   <style>
-   /*請在這裹撰寫你的CSS*/ 
     body{
       /* 漸層背景開始 */
       margin: 0;
@@ -55,6 +54,11 @@
       width: 100%;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
+    }
+
+    main>header{
+      flex-basis: 100%;
     }
 
     /* 動態背景開始 */
@@ -121,7 +125,14 @@
 <body>
   
 <main>
-    <h1>萬年曆</h1>
+    
+    <header>
+      <h1>萬年曆</h1>
+    </header>
+
+    <section>
+      <img src="./img/5-1.jpeg" width="350" height="800">
+    </section>
 
   <?php 
 class Calendar{ 
