@@ -123,44 +123,46 @@
     } 
     </style>
 <body>
-  
-<main>
+  <?php
+  $month = date("n"); 
+  ?>
+
+  <main>
     
     <header>
       <h1>萬年曆</h1>
     </header>
-
+    <!-- month1-1..... -->
     <section>
-      <img src="./img/5-1.jpeg" width="350" height="800">
+      <img src="./img/month<?php echo $month ?>-<?php echo rand(1,2)?>.jpg" width="350" height="800">
     </section>
-
-  <?php 
+    
+<?php 
 class Calendar{ 
-protected $_table;//table表格 
-protected $_currentDate;//當前日期 
-protected $_year; //年 
-protected $_month; //月 
-protected $_days; //找出當月總天數
-protected $_dayofweek;//找出當月一號是星期幾
-//設定基本參數
-public function __construct() 
-{ 
-$this->_table=""; 
-$this->_year = isset($_GET["y"])?$_GET["y"]:date("Y"); 
-$this->_month = isset($_GET["m"])?$_GET["m"]:date("m"); 
-if ($this->_month>12){//月份最大值
-$this->_month=1; 
-$this->_year++; 
-} 
-if ($this->_month<1){//月份最小值
-$this->_month=12; 
-$this->_year--; 
-} 
-$this->_currentDate = $this->_year.'年'.$this->_month.'月份';//当前得到的日期信息 
-$this->_days = date("t",mktime(0,0,0,$this->_month,1,$this->_year));//找出當前月份的總天數 
-$this->_dayofweek = date("w",mktime(0,0,0,$this->_month,1,$this->_year));//找出當月第一天是週幾
-} 
-
+  protected $_table;//table表格 
+  protected $_currentDate;//當前日期 
+  protected $_year; //年 
+  protected $_month; //月 
+  protected $_days; //找出當月總天數
+  protected $_dayofweek;//找出當月一號是星期幾
+  //設定基本參數
+  public function __construct() 
+  { 
+    $this->_table=""; 
+    $this->_year = isset($_GET["y"])?$_GET["y"]:date("Y"); 
+    $this->_month = isset($_GET["m"])?$_GET["m"]:date("m"); 
+    if ($this->_month>12){//月份最大值
+      $this->_month=1; 
+      $this->_year++; 
+    } 
+    if ($this->_month<1){//月份最小值
+      $this->_month=12; 
+      $this->_year--; 
+    } 
+    $this->_currentDate = $this->_year.'年'.$this->_month.'月份';//当前得到的日期信息 
+    $this->_days = date("t",mktime(0,0,0,$this->_month,1,$this->_year));//找出當前月份的總天數 
+    $this->_dayofweek = date("w",mktime(0,0,0,$this->_month,1,$this->_year));//找出當月第一天是週幾
+  } 
 //印標題
 protected function _showTitle() 
 { 
