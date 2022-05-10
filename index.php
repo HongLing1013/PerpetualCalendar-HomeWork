@@ -46,7 +46,7 @@
       -webkit-backdrop-filter: blur(10px);
     }
     /* 背景模糊結束 */
-    div {
+    main {
       position: relative;
       /* 因為body有偽元素 所以z-index要設定高一點 */
       z-index: 10;
@@ -120,7 +120,7 @@
     </style>
 <body>
   
-<div>
+<main>
     <h1>萬年曆</h1>
 
   <?php 
@@ -195,7 +195,7 @@ echo $this->_table;
 $calc=new Calendar(); 
 $calc->showCalendar();
 ?>
-  </div>
+  </main>
   
 </body>
 <html>
