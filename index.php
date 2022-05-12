@@ -1,7 +1,7 @@
 <html>
 <title>萬年曆作業</title>
 <style>
-  body {
+  .box {
     /* 漸層背景開始 */
     margin: 0;
     min-height: 100vh;
@@ -33,7 +33,7 @@
   }
 
   /* 背景模糊 */
-  body::after {
+  .box::after {
     content: '';
     display: block;
     position: fixed;
@@ -47,7 +47,7 @@
   }
 
   /* 背景模糊結束 */
-  main {
+  .main {
     position: relative;
     /* 因為body有偽元素 所以z-index要設定高一點 */
     z-index: 10;
@@ -59,7 +59,7 @@
     flex-wrap: wrap;
   }
 
-  main>header {
+  .main>header {
     flex-basis: 100%;
   }
 
@@ -131,35 +131,46 @@
   }
 
 /* 毛玻璃外框 */
-.main {
-  background-image: linear-gradient(to right top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
-  margin: auto;
-    position: relative;
-    width: 1400px;
-    height: 600px;
-    box-shadow: 0 5px 15px rgba(20, 20, 20, 0.6);
-    display: flex;
-    border-radius: 50px;
-    align-items: center;
-    top: 0px;
-  }
-  /* 毛玻璃外框結束 */
+.glass{
+  position: relative;
+  width: 900px;
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 毛玻璃外框 結束 */
 </style>
 
-<body>
-  <main class="main">
+<body class="box">
+  <!-- 動態背景 -->
+  <div class="main">
+
+    <!-- 標題 -->
     <header>
       <h1>萬年曆</h1>
     </header>
-    <!-- 左邊隨機圖 -->
-    <?php
+    <!-- 標題 結束 -->
+    
+    <!-- 毛玻璃外框 -->
+    <section class="glass">
+
+      <!-- 左邊隨機圖 -->
+      <?php
     $month = date("n");
     ?>
-    <section>
-      <img src="./img/month<?php echo $month ?>-<?php echo rand(1, 2) ?>.jpg" width="350" height="800">
-    </section>
-    <!-- 左邊隨機圖結束 -->
-
+    <aside class="photo">
+      <img src="./img/month<?php echo $month ?>-<?php echo rand(1, 2) ?>.jpg" width="280" height="600">
+    </aside>
+    <!-- 左邊隨機圖 結束 -->
+    
     <!-- 日曆 -->
     <?php
     class Calendar
@@ -202,7 +213,7 @@
         $this->_table .= "<td style='color:red'>星期六</td>";
         $this->_table .= "</tr>";
       }
-
+      
       //依照當月印出月曆
       protected function _showDate()
       {
@@ -233,8 +244,12 @@
     $calc = new Calendar();
     $calc->showCalendar();
     ?>
-    <!-- 日曆結束 -->
-  </main>
-
+    <!-- 日曆 結束 -->
+    
+  </section>
+    <!-- 毛玻璃外框 結束-->
+  </div>
+  <!-- 動態背景 結束-->
+  
 </body>
 <html>
