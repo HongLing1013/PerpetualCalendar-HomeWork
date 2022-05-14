@@ -164,6 +164,7 @@
       align-items: center;
       flex-wrap: wrap;
     }
+
     /* 萬年曆排版 結束 */
 
     .table {
@@ -209,7 +210,8 @@
       justify-content: space-between;
       flex-basis: 100%;
     }
-    .photo{
+
+    .photo {
       display: flex;
     }
   </style>
@@ -240,19 +242,19 @@
               $nextMonth = $month + 1;
               $nextYear = $year;
               break;
-              case 12:
-                $prevMonth = $month - 1;
-                $prevYear = $year;
-                $nextMonth = 1;
-                $nextYear = $year + 1;
+            case 12:
+              $prevMonth = $month - 1;
+              $prevYear = $year;
+              $nextMonth = 1;
+              $nextYear = $year + 1;
               break;
             default:
               $prevMonth = $month - 1;
               $prevYear = $year;
               $nextMonth = $month + 1;
               $nextYear = $year;
-            }
-            ?>
+          }
+          ?>
 
           <!-- 控制切換月份的按鈕 開始-->
           <div class="nav">
@@ -269,7 +271,7 @@
           <!-- 左邊隨機圖 -->
           <div class="photo">
             <img src="./img/month<?= $month; ?>-<?= rand(1, 2) ?>.jpg" width="280" height="600">
-        </div>
+          </div>
           <!-- 左邊隨機圖 結束 -->
 
           <!-- 萬年曆內容 -->
