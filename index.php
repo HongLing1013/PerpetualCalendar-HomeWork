@@ -141,6 +141,7 @@
       position: relative;
       /* 設定尺寸 */
       width: 900px;
+      height: 550px;
       min-height: 400px;
       /* 設定版面顏色及框線 */
       background: rgba(255, 255, 255, 0.1);
@@ -166,7 +167,10 @@
     }
 
     /* 萬年曆排版 結束 */
-
+    section{
+      display: flex;
+      justify-content: center;
+    }
     .table {
       width: 420px;
       height: 420px;
@@ -209,10 +213,6 @@
       display: flex;
       justify-content: space-between;
       flex-basis: 100%;
-    }
-
-    .photo {
-      display: flex;
     }
   </style>
 </head>
@@ -268,12 +268,6 @@
           </div>
           <!-- 控制切換月份的按鈕 結束-->
 
-          <!-- 左邊隨機圖 -->
-          <div class="photo">
-            <img src="./img/month<?= $month; ?>-<?= rand(1, 2) ?>.jpg" width="280" height="600">
-          </div>
-          <!-- 左邊隨機圖 結束 -->
-
           <!-- 萬年曆內容 -->
           <?php
           // 設定各項參數
@@ -299,6 +293,13 @@
           }
 
           ?>
+<!-- 萬年曆中間面板 開始 -->
+<section>
+            <!-- 左邊隨機圖 開始 -->
+          <div class="photo">
+          <img src="./img/month<?= $month; ?>-<?= rand(1, 2) ?>.jpg" width="190" height="490">
+          </div>
+          <!-- 左邊隨機圖 結束 -->
 
           <div class="table">
             <div class='header'>日</div>
@@ -322,6 +323,8 @@
             ?>
           </div>
           <!-- 萬年曆結束 -->
+          </section>
+          <!-- 萬年曆中間面板 開始 -->
         </div>
         <!-- 萬年曆樣式 結束 -->
       </div>
