@@ -141,8 +141,7 @@
       position: relative;
       /* 設定尺寸 */
       width: 900px;
-      height: 550px;
-      min-height: 400px;
+      height: 560px;
       /* 設定版面顏色及框線 */
       background: rgba(255, 255, 255, 0.1);
       box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
@@ -153,8 +152,8 @@
       /* 設置毛玻璃效果 */
       backdrop-filter: blur(25px);
     }
-
     /* 毛玻璃外框 結束 */
+
     /* 萬年曆排版 開始 */
     .wrapper {
       width: 580px;
@@ -172,8 +171,8 @@
       justify-content: center;
     }
     .table {
-      width: 420px;
-      height: 420px;
+      width: 651px;
+      height: 651px;
       display: flex;
       flex-wrap: wrap;
       align-content: baseline;
@@ -183,22 +182,26 @@
 
     .table div {
       display: inline-block;
-      width: 60px;
-      height: 60px;
-      border: 1px solid #999;
+      width: 93px;
+      height: 93px;
+      border: 1px solid rgba(255, 255, 255 , 0.2);
       box-sizing: border-box;
       margin-left: -1px;
       margin-top: -1px;
+      text-align: center;
+      line-height: 80px;
     }
 
     .table div.header {
       background: rgba(0, 0, 0, 0.5);
       color: white;
       height: 32px;
+      line-height: 30px;
+      font-family: 'Copperplate';
     }
 
     .weekend {
-      background: pink;
+      background: rgba(186, 85, 221 , 0.2);
     }
 
     .workday {
@@ -297,18 +300,19 @@
 <section>
             <!-- 左邊隨機圖 開始 -->
           <div class="photo">
-          <img src="./img/month<?= $month; ?>-<?= rand(1, 2) ?>.jpg" width="190" height="490">
+          <img src="./img/month<?= $month; ?>-<?= rand(1, 2) ?>.jpg" width="210" height="490">
           </div>
           <!-- 左邊隨機圖 結束 -->
-
+          <!-- 印出萬年曆標題 開始-->
           <div class="table">
-            <div class='header'>日</div>
-            <div class='header'>一</div>
-            <div class='header'>二</div>
-            <div class='header'>三</div>
-            <div class='header'>四</div>
-            <div class='header'>五</div>
-            <div class='header'>六</div>
+            <div class='header'>Sun</div>
+            <div class='header'>Mon</div>
+            <div class='header'>Tues</div>
+            <div class='header'>Wed</div>
+            <div class='header'>Thur</div>
+            <div class='header'>Fri</div>
+            <div class='header'>Sat</div>
+            <!-- 印出萬年曆標題 結束-->
             <?php
             foreach ($dateHouse as $k => $day) {
               $hol = ($k % 7 == 0 || $k % 7 == 6) ? 'weekend' : ""; //判定是否為假日
