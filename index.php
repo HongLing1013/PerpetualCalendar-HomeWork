@@ -167,8 +167,8 @@
     /* 萬年曆排版 結束 */
 
     .table {
-      width: 560px;
-      height: 560px;
+      width: 420px;
+      height: 420px;
       display: flex;
       flex-wrap: wrap;
       align-content: baseline;
@@ -178,8 +178,8 @@
 
     .table div {
       display: inline-block;
-      width: 80px;
-      height: 80px;
+      width: 60px;
+      height: 60px;
       border: 1px solid #999;
       box-sizing: border-box;
       margin-left: -1px;
@@ -209,10 +209,8 @@
       justify-content: space-between;
       flex-basis: 100%;
     }
-
     .photo{
       display: flex;
-      justify-content: flex-start;
     }
   </style>
 </head>
@@ -225,54 +223,36 @@
       <div class="glass">
         <!-- 萬年曆樣式 開始 -->
         <div class="wrapper">
-          <!-- 取得上一個月跟下一個月份的參數 -->
           <?php
+          // 取得上一個月跟下一個月份的參數
           if (isset($_GET['month'])) {
             $month = $_GET['month'];
             $year = $_GET['year'];
-            switch ($_GET['month']) {
-              case 1:
-                $prevMonth = 12;
-                $prevYear = $year - 1;
-                $nextMonth = $month + 1;
-                $nextYear = $year;
-                break;
-              case 12:
-                $prevMonth = $month - 1;
-                $prevYear = $year;
-                $nextMonth = 1;
-                $nextYear = $year + 1;
-                break;
-              default:
-                $prevMonth = $month - 1;
-                $prevYear = $year;
-                $nextMonth = $month + 1;
-                $nextYear = $year;
-            }
           } else {
             $month = date('n');
             $year = date("Y");
-            switch ($month) {
-              case 1:
-                $prevMonth = 12;
-                $prevYear = $year - 1;
-                $nextMonth = $month + 1;
-                $nextYear = $year;
-                break;
+          }
+          // 判斷1月以前跟12月以後的處理方式
+          switch ($month) {
+            case 1:
+              $prevMonth = 12;
+              $prevYear = $year - 1;
+              $nextMonth = $month + 1;
+              $nextYear = $year;
+              break;
               case 12:
                 $prevMonth = $month - 1;
                 $prevYear = $year;
                 $nextMonth = 1;
                 $nextYear = $year + 1;
-                break;
-              default:
-                $prevMonth = $month - 1;
-                $prevYear = $year;
-                $nextMonth = $month + 1;
-                $nextYear = $year;
+              break;
+            default:
+              $prevMonth = $month - 1;
+              $prevYear = $year;
+              $nextMonth = $month + 1;
+              $nextYear = $year;
             }
-          } ?>
-          <!-- 取得上一個月跟下一個月份的參數 結束-->
+            ?>
 
           <!-- 控制切換月份的按鈕 開始-->
           <div class="nav">
