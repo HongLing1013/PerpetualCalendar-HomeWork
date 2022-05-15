@@ -159,7 +159,7 @@
       position: absolute;
       top: 0.5rem;
       left: 0.5rem;
-      width: 890px;
+      width: 885px;
       height: 50px;
       background: rgba(255, 255, 255, 0.3);
       font-size: 25px;
