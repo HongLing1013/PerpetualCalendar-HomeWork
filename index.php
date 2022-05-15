@@ -249,12 +249,6 @@
 
 <!-- 漸層動態背景 開始 -->
 
-<body class="bg">
-  <div class="box">
-    <!-- 毛玻璃外框 開始 -->
-    <div class="glass" data-title="Calendar">
-      <!-- 萬年曆樣式 開始 -->
-      <div class="wrapper">
         <?php
         // 取得上一個月跟下一個月份的參數
         if (isset($_GET['month'])) {
@@ -285,13 +279,19 @@
             $nextYear = $year;
         }
         ?>
+<body class="bg">
+  <div class="box">
+    <!-- 毛玻璃外框 開始 -->
+    <div class="glass" data-title="<?= $year;?>">
+      <!-- 萬年曆樣式 開始 -->
+      <div class="wrapper">
 
         <!-- 控制切換月份的按鈕 開始-->
         <div class="nav">
           <span>
             <a href="index.php?year=<?= $prevYear; ?>&month=<?= $prevMonth; ?>">上一個月</a>
           </span>
-          <span><?= $year . '年' . $month . '月'; ?></span>
+          <span><?= $month . '月'; ?></span>
           <span>
             <a href="index.php?year=<?= $nextYear; ?>&month=<?= $nextMonth; ?>">下一個月</a>
           </span>
