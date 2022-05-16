@@ -13,11 +13,17 @@
       min-height: 100vh;
       background-color: #e493d0;
       /* 設定背景色塊 開始*/
-      background-image: radial-gradient(closest-side, rgba(235, 105, 78, 1), rgba(235, 105, 78, 0)),
-        radial-gradient(closest-side, rgba(243, 11, 164, 1), rgba(243, 11, 164, 0)),
-        radial-gradient(closest-side, rgba(254, 234, 131, 1), rgba(254, 234, 131, 0)),
-        radial-gradient(closest-side, rgba(170, 142, 245, 1), rgba(170, 142, 245, 0)),
-        radial-gradient(closest-side, rgba(248, 192, 147, 1), rgba(248, 192, 147, 0));
+      background-image: 
+      /* 	LightSkyBlue 淡藍色 */
+      radial-gradient(closest-side, rgba(135, 206, 250, 1), rgba(135, 206, 250, 0)),
+      /* 	LemonChiffon 檸檬薄紗 鵝黃色 */
+      radial-gradient(closest-side, rgba(255, 250, 205, 1), rgba(255, 250, 205, 0)),
+      /* 	pink 粉色 */
+      radial-gradient(closest-side, rgba(255, 192, 203, 1), rgba(255, 192, 203, 0)),
+      /* Auqamarin	绿玉\碧绿色 */
+      radial-gradient(closest-side, rgba(127, 255, 170, 1), rgba(127, 255, 170, 0)),
+      /* 	Tomato	番茄 */
+        radial-gradient(closest-side, rgba(255, 99, 71, 1), rgba(255, 99, 71, 0));
       /* 設定背景色塊 結束*/
       /* 設定背景色塊大小 開始*/
       background-size:
