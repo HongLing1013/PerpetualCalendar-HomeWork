@@ -11,18 +11,18 @@
     .bg {
       margin: 0;
       min-height: 100vh;
-      background-color: #e493d0;
+      background-color: #F5F5DC;
       /* 設定背景色塊 開始*/
       background-image: 
-      /* 	LightSkyBlue 淡藍色 */
+      /* 	LightSkyBlue 淡藍 */
       radial-gradient(closest-side, rgba(135, 206, 250, 1), rgba(135, 206, 250, 0)),
-      /* Auqamarin	绿玉\碧绿色 */
-      radial-gradient(closest-side, rgba(127, 255, 170, 1), rgba(127, 255, 170, 0)),
-      /* 	LemonChiffon 檸檬薄紗 鵝黃色 */
-      radial-gradient(closest-side, rgba(255, 250, 205, 1), rgba(255, 250, 205, 0)),
-      /* 	pink 粉色 */
+      /* 	Pink 粉 */
       radial-gradient(closest-side, rgba(255, 192, 203, 1), rgba(255, 192, 203, 0)),
-      /* 	Tomato	番茄 */
+      /* 	LemonChiffon 鵝黃 */
+      radial-gradient(closest-side, rgba(255, 250, 205, 1), rgba(255, 250, 205, 0)),
+      /* 	LightGreen 淡绿色 */
+      radial-gradient(closest-side, rgba(144, 238, 144, 1), rgba(144, 238, 144, 0)),
+      /* 	Tomato 橘紅 */
       radial-gradient(closest-side, rgba(255, 99, 71, 1), rgba(255, 99, 71, 0));
       /* 設定背景色塊 結束*/
       /* 設定背景色塊大小 開始*/
@@ -149,7 +149,7 @@
       padding: 0px;
       margin: 0px;
       font-size: 20px;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.3);
       width: 900px;
       height: 560px;
       border-radius: 15px;
@@ -167,7 +167,7 @@
       left: 0.5rem;
       width: 885px;
       height: 50px;
-      background: rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.5);
       font-size: 25px;
       text-transform: uppercase;
       font-weight: 900;
