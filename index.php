@@ -16,14 +16,14 @@
       background-image: 
       /* 	LightSkyBlue 淡藍色 */
       radial-gradient(closest-side, rgba(135, 206, 250, 1), rgba(135, 206, 250, 0)),
+      /* Auqamarin	绿玉\碧绿色 */
+      radial-gradient(closest-side, rgba(127, 255, 170, 1), rgba(127, 255, 170, 0)),
       /* 	LemonChiffon 檸檬薄紗 鵝黃色 */
       radial-gradient(closest-side, rgba(255, 250, 205, 1), rgba(255, 250, 205, 0)),
       /* 	pink 粉色 */
       radial-gradient(closest-side, rgba(255, 192, 203, 1), rgba(255, 192, 203, 0)),
-      /* Auqamarin	绿玉\碧绿色 */
-      radial-gradient(closest-side, rgba(127, 255, 170, 1), rgba(127, 255, 170, 0)),
       /* 	Tomato	番茄 */
-        radial-gradient(closest-side, rgba(255, 99, 71, 1), rgba(255, 99, 71, 0));
+      radial-gradient(closest-side, rgba(255, 99, 71, 1), rgba(255, 99, 71, 0));
       /* 設定背景色塊 結束*/
       /* 設定背景色塊大小 開始*/
       background-size:
