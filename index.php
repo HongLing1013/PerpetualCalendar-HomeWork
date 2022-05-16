@@ -251,28 +251,32 @@
 
         <?php
         // 取得上一個月跟下一個月份的參數
-        if (isset($_GET['month'])) {
+        if (isset($_GET['month'])) { 
+        //isset判斷這個東西裡面有沒有設 0也是有設定
           $month = $_GET['month'];
           $year = $_GET['year'];
+          // 判斷1月跟12月 避免跳到0月跟13月
+          /* 這個switch...case如果放到if...else外的話
+             會造成找不到陣列而出錯*/
         } else {
-          $month = date('n');
-          $year = date("Y");
+          $month = date('n'); //取得當前月
+          $year = date("Y"); //取得當前年
         }
         // 判斷1月以前跟12月以後的處理方式
         switch ($month) {
-          case 1:
-            $prevMonth = 12;
-            $prevYear = $year - 1;
+          case 1: //1月的話
+            $prevMonth = 12; //1月的上一個月是12月份 所以直接帶入12
+            $prevYear = $year - 1; //1月的上一個月是去年 所以年份要-1
             $nextMonth = $month + 1;
             $nextYear = $year;
             break;
-          case 12:
+        case 12: //12月的話
             $prevMonth = $month - 1;
             $prevYear = $year;
-            $nextMonth = 1;
-            $nextYear = $year + 1;
+            $nextMonth = 1; //12月的下一個月是1月 所以直接帶入1
+            $nextYear = $year + 1; //12月的下一個月是明年 所以要+1
             break;
-          default:
+        default: //如果是在2-11月的話 在這裡算好需要的值 帶到下面上一個月下一個月的連結去
             $prevMonth = $month - 1;
             $prevYear = $year;
             $nextMonth = $month + 1;
@@ -301,25 +305,26 @@
         <!-- 萬年曆內容 -->
         <?php
         // 設定各項參數
-        $firstDay = $year . "-" . $month . "-1"; //第一天的位子
-        $firstWeekday = date("w", strtotime($firstDay)); //第一天是星期幾
-        $monthDays = date("t", strtotime($firstDay));
-        $lastDay = $year . "-" . $month . "-" . $monthDays; //最後一天
+        $firstDay = $year . "-" . $month . "-1"; //這個月第一天的位子
+        $firstWeekday = date("w", strtotime($firstDay)); //這個月第一天是星期幾
+        $monthDays = date("t", strtotime($firstDay));//這個月的總天數
+        $lastDay = $year . "-" . $month . "-" . $monthDays; //這個月最後一天
         $today = date("Y-m-d"); //取值今天
-        $lastWeekday = date("w", strtotime($lastDay)); //最後一天是星期幾
+        $lastWeekday = date("w", strtotime($lastDay)); //這個月最後一天是星期幾
         $dateHouse = [];
 
         for ($i = 0; $i < $firstWeekday; $i++) {
-          $dateHouse[] = "";
+          $dateHouse[] = "";//一號以前印空白
         }
 
         for ($i = 0; $i < $monthDays; $i++) {
           $date = date("Y-m-d", strtotime("+$i days", strtotime($firstDay)));
+          //日期函數的年月日 換算成字串 字串印出來以後要+1
           $dateHouse[] = $date;
         }
 
         for ($i = 0; $i < (6 - $lastWeekday); $i++) {
-          $dateHouse[] = "";
+          $dateHouse[] = ""; //最後一天以後印空白
         }
 
         ?>
@@ -343,7 +348,6 @@
             <?php
             foreach ($dateHouse as $k => $day) {
               $hol = ($k % 7 == 0 || $k % 7 == 6) ? 'weekend' : ""; //判定是否為假日
-
               if (!empty($day)) {
                 $dayFormat = date("j", strtotime($day));
                 echo "<div class='{$hol}'>{$dayFormat}</div>";
