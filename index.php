@@ -156,7 +156,7 @@
     }
     /* 毛玻璃外框 結束 */
 
-    /* 毛玻璃標題小毛玻璃 開始 */
+    /* 標題小毛玻璃 開始 */
     .glass::before {
       content: attr(data-title);
       display: flex;
@@ -176,16 +176,22 @@
       transition: all 0.8s ease-in-out;
       line-height: 15px;
     }
-    /* 毛玻璃標題小毛玻璃 結束 */
+    /* 標題小毛玻璃 結束 */
 
-    /* 毛玻璃標題動態 開始 */
+    /* 標題小毛玻璃動態 開始 */
     .glass:hover::before {
       height: 4%;
       top: 5px;
       transform: translateY(-70%);
       font-size: 23px;
     }
-    /* 毛玻璃標題動態 結束 */
+    /* 標題小毛玻璃動態 結束 */
+
+    /* 標題小毛玻璃文字效果 開始 */
+    [data-title] {
+      color: hotpink;
+    }
+    /* 標題小毛玻璃文字效果 結束 */
 
     /* 萬年曆排版 開始 */
     .wrapper {
