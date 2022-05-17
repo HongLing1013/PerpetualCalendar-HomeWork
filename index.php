@@ -349,7 +349,7 @@ switch ($month) {
         <aside>
           <!-- 左邊隨機圖 開始 -->
           <figure class="img">
-            <img src="./img/month<?= $month; ?>-<?= rand(1, 2) ?>.jpg" width="230" height="510">
+            <img src="./img/month<?= $month; ?>-<?= rand(1, 2) ?>.jpg" width="240" height="510">
           </figure>
           <!-- 左邊隨機圖 結束 -->
           <!-- 印出萬年曆標題 開始-->
