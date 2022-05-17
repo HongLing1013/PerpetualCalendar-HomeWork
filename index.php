@@ -237,6 +237,12 @@
       margin-top: -1px;
       text-align: center;
       line-height: 80px;
+      font-size: 35px;
+      background: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+  background: -webkit-linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
     }
 
     .table div.header {
