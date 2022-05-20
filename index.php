@@ -264,6 +264,8 @@
       display: flex;
       justify-content: space-between;
       flex-basis: 100%;
+      padding: 0;
+      margin: 0;
     }
 
     /* 萬年曆排版 結束 */
@@ -318,7 +320,9 @@ switch ($month) {
           <span>
             <a href="index.php?year=<?= $prevYear; ?>&month=<?= $prevMonth; ?>">上一個月</a>
           </span>
-          <span><?= $month . '月'; ?></span>
+          <!-- 月份標題圖片 開始 -->
+          <span><img src="./header-img/<?= $month; ?>.png" width="200" height="40"></span>
+          <!-- 月份標題圖片 結束 -->
           <span>
             <a href="index.php?year=<?= $nextYear; ?>&month=<?= $nextMonth; ?>">下一個月</a>
           </span>
@@ -377,7 +381,7 @@ switch ($month) {
               } else {
                 echo "<div class='{$hol}'></div>";
               }
-            }
+              }
             ?>
           </div>
           <!-- 萬年曆結束 -->
