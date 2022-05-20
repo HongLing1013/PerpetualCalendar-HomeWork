@@ -167,7 +167,7 @@
       top: 0.5rem;
       left: 0.5rem;
       width: 935px;
-      height: 50px;
+      height: 70px;
       background: rgba(255, 255, 255, 0.5);
       font-size: 25px;
       text-transform: uppercase;
@@ -192,7 +192,7 @@
 
     /* 標題小毛玻璃文字效果 開始 */
     [data-title] {
-      color: blueviolet;
+      color: rgba(0, 0, 0, 0.5);
     }
 
     /* 標題小毛玻璃文字效果 結束 */
@@ -200,7 +200,7 @@
     /* 萬年曆排版 開始 */
     .wrapper {
       width: 580px;
-      margin: 2rem auto;
+      margin: 1rem auto;
       /* 對齊方式 */
       display: flex;
       justify-content: center;
@@ -219,7 +219,7 @@
 
     .table {
       width: 644px;
-      height: 644px;
+      height: 497px;
       display: flex;
       flex-wrap: wrap;
       align-content: baseline;
@@ -230,7 +230,7 @@
     .table div {
       display: inline-block;
       width: 92px;
-      height: 92px;
+      height: 71px;
       border: 1px solid rgba(255, 255, 255, 0.2);
       box-sizing: border-box;
       margin-left: -1px;
@@ -259,18 +259,18 @@
   color: transparent;
     }
 
-
     .nav {
       display: flex;
       justify-content: space-between;
       flex-basis: 100%;
     }
 
+    .weekend {
+            background: black;
+        }
     /* 萬年曆排版 結束 */
   </style>
 </head>
-
-<!-- 漸層動態背景 開始 -->
 
 <?php
 // 取得上一個月跟下一個月份的參數
@@ -293,21 +293,23 @@ switch ($month) {
     $nextMonth = $month + 1;
     $nextYear = $year;
     break;
-  case 12: //12月的話
-    $prevMonth = $month - 1;
-    $prevYear = $year;
-    $nextMonth = 1; //12月的下一個月是1月 所以直接帶入1
-    $nextYear = $year + 1; //12月的下一個月是明年 所以要+1
-    break;
-  default: //如果是在2-11月的話 在這裡算好需要的值 帶到下面上一個月下一個月的連結去
-    $prevMonth = $month - 1;
-    $prevYear = $year;
-    $nextMonth = $month + 1;
-    $nextYear = $year;
-}
-?>
+    case 12: //12月的話
+      $prevMonth = $month - 1;
+      $prevYear = $year;
+      $nextMonth = 1; //12月的下一個月是1月 所以直接帶入1
+      $nextYear = $year + 1; //12月的下一個月是明年 所以要+1
+      break;
+      default: //如果是在2-11月的話 在這裡算好需要的值 帶到下面上一個月下一個月的連結去
+      $prevMonth = $month - 1;
+      $prevYear = $year;
+      $nextMonth = $month + 1;
+      $nextYear = $year;
+    }
+    ?>
 
+<!-- 漸層背景 開始 -->
 <body class="bg">
+  <!-- 動態背景 開始 -->
   <main class="box">
     <!-- 毛玻璃外框 開始 -->
     <article class="glass" data-title="<?= $year; ?>">
@@ -316,11 +318,15 @@ switch ($month) {
         <!-- 控制切換月份的按鈕 開始-->
         <nav class="nav">
           <span>
-            <a href="index.php?year=<?= $prevYear; ?>&month=<?= $prevMonth; ?>">上一個月</a>
+            <a href="index.php?year=<?= $prevYear; ?>&month=<?= $prevMonth; ?>">◄ Last Month</a>
           </span>
-          <span><?= $month . '月'; ?></span>
+          <!-- 月份標題圖 開始 -->
           <span>
-            <a href="index.php?year=<?= $nextYear; ?>&month=<?= $nextMonth; ?>">下一個月</a>
+            <img src="./header_img/<?= $month;?>.png" alt="<?= $month;?>" width="160" height="45">
+          </span>
+          <!-- 月份標題圖 結束 -->
+          <span>
+            <a href="index.php?year=<?= $nextYear; ?>&month=<?= $nextMonth; ?>">Next Month ►</a>
           </span>
         </nav>
         <!-- 控制切換月份的按鈕 結束-->
