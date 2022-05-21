@@ -276,10 +276,120 @@
       }
 
     .nav {
+      /* padding: auto;
+      margin: auto; */
       display: flex;
       justify-content: space-between;
       flex-basis: 100%;
     }
+
+    .nav1 {
+      flex-basis: 33%;
+      margin-top: 40vh;
+      justify-content: center;
+    }
+    
+    .nav2 {
+      flex-basis: 33%;
+      margin-top: 40vh;
+      justify-content: center;
+    }
+
+    /* 上下月調整按鈕 開始 */
+    
+    .nav1>a{
+      font-size: 30px;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
+    border-radius: 40px;
+    background-size: 400%;
+    text-transform: uppercase;
+}
+
+.nav1>a:hover{
+    animation: animate 8s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+
+.nav1>a::before{
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
+    border-radius: 40px;
+    background-size: 400%;
+    opacity: -1;
+    transition: 0.5s;
+}
+
+.nav1>a:hover::before{
+    filter: blur(20px);
+    opacity: 1;
+}
+    .nav2>a{
+    font-size: 30px;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
+    border-radius: 40px;
+    background-size: 400%;
+    text-transform: uppercase;
+}
+
+.nav2>a:hover{
+    animation: animate 8s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+
+.nav2>a::before{
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
+    border-radius: 40px;
+    background-size: 400%;
+    opacity: -1;
+    transition: 0.5s;
+}
+
+.nav2>a:hover::before{
+    filter: blur(20px);
+    opacity: 1;
+}
+
+
+    /* 上下月調整按鈕 結束 */
+
+      /* 上下月調整按鈕結束 */
 
     .weekend {
       font-weight: bold;
@@ -288,6 +398,10 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+        }
+
+        .today{
+          color: pink;
         }
     /* 萬年曆排版 結束 */
   </style>
@@ -332,24 +446,29 @@ switch ($month) {
 <body class="bg">
   <!-- 動態背景 開始 -->
   <main class="box">
+
+    <nav class="nav">
+    <span class="nav1">
+            <a href="index.php?year=<?= $prevYear; ?>&month=<?= $prevMonth; ?>">　◄　</a>
+          </span>
     <!-- 毛玻璃外框 開始 -->
     <article class="glass" data-title="<?= $year; ?>">
       <!-- 萬年曆樣式 開始 -->
       <section class="wrapper">
         <!-- 控制切換月份的按鈕 開始-->
-        <nav class="nav">
+        <!-- <nav class="nav">
           <span>
             <a href="index.php?year=<?= $prevYear; ?>&month=<?= $prevMonth; ?>">◄ Last Month</a>
-          </span>
+          </span> -->
           <!-- 月份標題圖 開始 -->
           <span>
             <img src="./header_img/<?= $month;?>.png" alt="<?= $month;?>" width="250vw" height="55vh">
           </span>
           <!-- 月份標題圖 結束 -->
-          <span>
+          <!-- <span>
             <a href="index.php?year=<?= $nextYear; ?>&month=<?= $nextMonth; ?>">Next Month ►</a>
           </span>
-        </nav>
+        </nav> -->
         <!-- 控制切換月份的按鈕 結束-->
 
         <!-- 萬年曆內容 -->
@@ -414,6 +533,11 @@ switch ($month) {
       <!-- 萬年曆樣式 結束 -->
     </article>
     <!-- 毛玻璃外框 結束 -->
+              <span class="nav2">
+            <a href="index.php?year=<?= $nextYear; ?>&month=<?= $nextMonth; ?>">　►　</a>
+          </span>
+    </nav>
+
   </main>
   <!-- 動態背景 結束 -->
 </body>
