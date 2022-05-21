@@ -174,9 +174,9 @@
       top: 0.5rem;
       left: 0.5rem;
       /* width: 935px; */
-      width: 68.5vw;
+      width: 98.5%;
       /* height: 65px; */
-      height: 10%;
+      height: 12%;
       background: rgba(255, 255, 255, 0.5);
       font-size: 25px;
       text-transform: uppercase;
@@ -227,7 +227,7 @@
     }
 
     .img{
-      margin: 5px;
+      margin: 2vh 0;
     }
 
     .table {
@@ -289,20 +289,32 @@
       flex-basis: 10%;
       margin-top: 40vh;
       justify-content: center;
-      margin-right: 0.5vw;
-      margin-left: 0.5vw;
+      margin-left: 3vw;
     }
     
     .nav2 {
       flex-basis: 10%;
       margin-top: 40vh;
-      justify-content: center;
-      margin-right: 0.5vw;
-      margin-left: 0.5vw;
+      justify-content: flex-end;
+      margin-right: 0.1vw;
+      margin-left: 0.1vw;
+    }
+    .nav3 {
+      flex-basis: 10%;
+      margin-top: 40vh;
+      justify-content: flex-end;
+      margin-right: 0.1vw;
+      margin-left: 2.5vw;
+    }
+    .nav4 {
+      flex-basis: 10%;
+      margin-top: 40vh;
+      justify-content: flex-end;
+      margin-right: 0vw;
     }
 
-    /* 上下月調整按鈕 開始 */
-    /* 左邊上個月的按鈕 */
+    /* 按鈕 開始 */
+    /* 左邊前一年的按鈕 */
     .nav1>a{
       display: flex;
       justify-content: center;
@@ -350,7 +362,7 @@
     opacity: 1;
 }
 
-/* 右邊下個月的按鈕 */
+/* 左邊上個月的按鈕 */
     .nav2>a{
       display: flex;
       justify-content: center;
@@ -397,11 +409,103 @@
     filter: blur(20px);
     opacity: 1;
 }
+/* 右邊後一個月的按鈕 */
+    .nav3>a{
+      display: flex;
+      justify-content: center;
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+    line-height: 65px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
+    border-radius: 40px;
+    background-size: 400%;
+    text-transform: uppercase;
+}
+
+.nav3>a:hover{
+    animation: animate 8s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+
+.nav3>a::before{
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
+    border-radius: 40px;
+    background-size: 400%;
+    opacity: -1;
+    transition: 0.5s;
+}
+
+.nav3>a:hover::before{
+    filter: blur(20px);
+    opacity: 1;
+}
+/* 右邊後一年的按鈕 */
+    .nav4>a{
+      display: flex;
+      justify-content: center;
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+    line-height: 65px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
+    border-radius: 40px;
+    background-size: 400%;
+    text-transform: uppercase;
+}
+
+.nav4>a:hover{
+    animation: animate 8s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+
+.nav4>a::before{
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
+    border-radius: 40px;
+    background-size: 400%;
+    opacity: -1;
+    transition: 0.5s;
+}
+
+.nav4>a:hover::before{
+    filter: blur(20px);
+    opacity: 1;
+}
 
 
-    /* 上下月調整按鈕 結束 */
-
-      /* 上下月調整按鈕結束 */
+    /* 按鈕 結束 */
 
     .weekend {
       font-weight: bold;
@@ -463,7 +567,7 @@ switch ($month) {
     <span class="nav1">
             <a href="index.php?year=<?= $prevYear-1; ?>&month=<?= $prevMonth+1; ?>">◄◄</a>
           </span>
-    <span class="nav1">
+    <span class="nav2">
             <a href="index.php?year=<?= $prevYear; ?>&month=<?= $prevMonth; ?>">◄</a>
           </span>
     <!-- 毛玻璃外框 開始 -->
@@ -548,10 +652,10 @@ switch ($month) {
       <!-- 萬年曆樣式 結束 -->
     </article>
     <!-- 毛玻璃外框 結束 -->
-              <span class="nav2">
+              <span class="nav3">
             <a href="index.php?year=<?= $nextYear; ?>&month=<?= $nextMonth; ?>">►</a>
           </span>
-              <span class="nav2">
+              <span class="nav4">
             <a href="index.php?year=<?= $nextYear+1; ?>&month=<?= $nextMonth-1; ?>">►►</a>
           </span>
     </nav>
