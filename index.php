@@ -201,81 +201,13 @@
 
     /* 標題小毛玻璃文字效果 開始 */
     [data-title]{
-      color: transparent; 
-      -webkit-text-stroke: 1px lightslategray; 
-      letter-spacing: 0.04em; 
+      color: transparent;
+      -webkit-text-stroke: 1px lightslategray;
+      letter-spacing: 0.04em;
       flex-basis: 100%;
     }
 
     /* 標題小毛玻璃文字效果 結束 */
-
-    /* 萬年曆排版 開始 */
-    .wrapper {
-      width: 60vw;
-      margin: 1rem auto;
-      /* 對齊方式 */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      flex-basis: 100%;
-    }
-
-    aside {
-      display: flex;
-      justify-content: center;
-    }
-
-    .img{
-      margin: 2vh 0;
-    }
-
-    .table {
-      width: 52.29vw;
-      height:73.5vh;
-      display: flex;
-      flex-wrap: wrap;
-      align-content: baseline;
-      margin-left: 1px;
-      margin-top: 1px;
-    }
-
-    .table div {
-      display: inline-block;
-      width: 7.41vw;
-      height: 10.5vh;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      box-sizing: border-box;
-      margin-left: -1px;
-      margin-top: -1px;
-      text-align: center;
-      line-height: 80px;
-      font-size: 35px;
-    }
-    
-    .table>div:not(.weekend,.today){
-      font-weight: bold;
-      background: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
-  background: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-    }
-
-    .table div.header {
-      background: rgba(0, 0, 0, 0.5);
-      /* color: white; */
-      font-weight: bold;
-      height: 9vh;
-      /* line-height: auto; */
-      font-size: 55px;
-      
-      background: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
-      background: -webkit-linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      }
 
     .nav {
       /* padding: auto;
@@ -291,7 +223,7 @@
       justify-content: center;
       margin-left: 3vw;
     }
-    
+
     .nav2 {
       flex-basis: 10%;
       margin-top: 40vh;
@@ -507,6 +439,76 @@
 
     /* 按鈕 結束 */
 
+    /* 萬年曆排版 開始 */
+    .wrapper {
+      width: 60vw;
+      margin: 1rem auto;
+      /* 對齊方式 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-basis: 100%;
+    }
+
+    aside {
+      display: flex;
+      justify-content: center;
+    }
+
+    .img{
+      margin: 2vh 0;
+    }
+
+    .table {
+      width: 52.29vw;
+      height:73.5vh;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: baseline;
+      margin-left: 1px;
+      margin-top: 1px;
+    }
+
+    .table div {
+      display: inline-block;
+      width: 7.41vw;
+      height: 10.5vh;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-sizing: border-box;
+      margin-left: -1px;
+      margin-top: -1px;
+      text-align: center;
+      line-height: 80px;
+      font-size: 35px;
+    }
+
+    .table>div:not(.weekend,.today){
+      font-weight: bold;
+      background: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+  background: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+    }
+
+    .table div.header {
+      background: rgba(0, 0, 0, 0.5);
+      /* color: white; */
+      font-weight: bold;
+      height: 9vh;
+      /* line-height: auto; */
+      font-size: 55px;
+
+      background: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+      background: -webkit-linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      }
+
+
+
     .weekend {
       font-weight: bold;
       background: linear-gradient(to top, #3b41c5 0%, #a981bb 49%, #ffc8a9 100%);
@@ -517,11 +519,12 @@
         }
 
         .today{
-          font-weight: bold;
-      background: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
-  background: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
-  color: white;
-  border-radius: 100px;
+    line-height: 35px;
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+    color: white;
+    border-radius: 50%;
         }
     /* 萬年曆排版 結束 */
   </style>
@@ -530,37 +533,37 @@
 <?php
 // 取得上一個月跟下一個月份的參數
 if (isset($_GET['month'])) {
-  //isset判斷這個東西裡面有沒有設 0也是有設定
-  $month = $_GET['month'];
-  $year = $_GET['year'];
-  // 判斷1月跟12月 避免跳到0月跟13月
-  /* 這個switch...case如果放到if...else外的話
-             會造成找不到陣列而出錯*/
+    //isset判斷這個東西裡面有沒有設 0也是有設定
+    $month = $_GET['month'];
+    $year = $_GET['year'];
+    // 判斷1月跟12月 避免跳到0月跟13月
+    /* 這個switch...case如果放到if...else外的話
+會造成找不到陣列而出錯*/
 } else {
-  $month = date('n'); //取得當前月
-  $year = date("Y"); //取得當前年
+    $month = date('n'); //取得當前月
+    $year = date("Y"); //取得當前年
 }
 // 判斷1月以前跟12月以後的處理方式
 switch ($month) {
-  case 1: //1月的話
-    $prevMonth = 12; //1月的上一個月是12月份 所以直接帶入12
-    $prevYear = $year - 1; //1月的上一個月是去年 所以年份要-1
-    $nextMonth = $month + 1;
-    $nextYear = $year;
-    break;
+    case 1: //1月的話
+        $prevMonth = 12; //1月的上一個月是12月份 所以直接帶入12
+        $prevYear = $year - 1; //1月的上一個月是去年 所以年份要-1
+        $nextMonth = $month + 1;
+        $nextYear = $year;
+        break;
     case 12: //12月的話
-      $prevMonth = $month - 1;
-      $prevYear = $year;
-      $nextMonth = 1; //12月的下一個月是1月 所以直接帶入1
-      $nextYear = $year + 1; //12月的下一個月是明年 所以要+1
-      break;
-      default: //如果是在2-11月的話 在這裡算好需要的值 帶到下面上一個月下一個月的連結去
-      $prevMonth = $month - 1;
-      $prevYear = $year;
-      $nextMonth = $month + 1;
-      $nextYear = $year;
-    }
-    ?>
+        $prevMonth = $month - 1;
+        $prevYear = $year;
+        $nextMonth = 1; //12月的下一個月是1月 所以直接帶入1
+        $nextYear = $year + 1; //12月的下一個月是明年 所以要+1
+        break;
+    default: //如果是在2-11月的話 在這裡算好需要的值 帶到下面上一個月下一個月的連結去
+        $prevMonth = $month - 1;
+        $prevYear = $year;
+        $nextMonth = $month + 1;
+        $nextYear = $year;
+}
+?>
 
 <!-- 漸層背景 開始 -->
 <body class="bg">
@@ -569,51 +572,51 @@ switch ($month) {
 
     <nav class="nav">
     <span class="nav1">
-            <a href="index.php?year=<?= $prevYear-1; ?>&month=<?= $prevMonth+1; ?>">◄◄</a>
+            <a href="index.php?year=<?=$prevYear - 1;?>&month=<?=$prevMonth + 1;?>">◄◄</a>
           </span>
     <span class="nav2">
-            <a href="index.php?year=<?= $prevYear; ?>&month=<?= $prevMonth; ?>">◄</a>
+            <a href="index.php?year=<?=$prevYear;?>&month=<?=$prevMonth;?>">◄</a>
           </span>
     <!-- 毛玻璃外框 開始 -->
-    <article class="glass" data-title="<?= $year; ?>">
+    <article class="glass" data-title="<?=$year;?>">
       <!-- 萬年曆樣式 開始 -->
       <section class="wrapper">
           <!-- 月份標題圖 開始 -->
           <span>
-            <img src="./header_img/<?= $month;?>.png" alt="<?= $month;?>" width="245vw" height="80vh">
+            <img src="./header_img/<?=$month;?>.png" alt="<?=$month;?>" width="245vw" height="80vh">
           </span>
           <!-- 月份標題圖 結束 -->
         <!-- 萬年曆內容 -->
         <?php
-        // 設定各項參數
-        $firstDay = $year . "-" . $month . "-1"; //這個月第一天的位子
-        $firstWeekday = date("w", strtotime($firstDay)); //這個月第一天是星期幾
-        $monthDays = date("t", strtotime($firstDay)); //這個月的總天數
-        $lastDay = $year . "-" . $month . "-" . $monthDays; //這個月最後一天
-        $today = date("Y-m-d"); //取值今天
-        $lastWeekday = date("w", strtotime($lastDay)); //這個月最後一天是星期幾
-        $dateHouse = [];
+// 設定各項參數
+$firstDay = $year . "-" . $month . "-1"; //這個月第一天的位子
+$firstWeekday = date("w", strtotime($firstDay)); //這個月第一天是星期幾
+$monthDays = date("t", strtotime($firstDay)); //這個月的總天數
+$lastDay = $year . "-" . $month . "-" . $monthDays; //這個月最後一天
+$today = date("Y-m-d"); //取值今天
+$lastWeekday = date("w", strtotime($lastDay)); //這個月最後一天是星期幾
+$dateHouse = [];
 
-        for ($i = 0; $i < $firstWeekday; $i++) {
-          $dateHouse[] = ""; //一號以前印空白
-        }
+for ($i = 0; $i < $firstWeekday; $i++) {
+    $dateHouse[] = ""; //一號以前印空白
+}
 
-        for ($i = 0; $i < $monthDays; $i++) {
-          $date = date("Y-m-d", strtotime("+$i days", strtotime($firstDay)));
-          //日期函數的年月日 換算成字串 字串印出來以後要+1
-          $dateHouse[] = $date;
-        }
+for ($i = 0; $i < $monthDays; $i++) {
+    $date = date("Y-m-d", strtotime("+$i days", strtotime($firstDay)));
+    //日期函數的年月日 換算成字串 字串印出來以後要+1
+    $dateHouse[] = $date;
+}
 
-        for ($i = 0; $i < (6 - $lastWeekday); $i++) {
-          $dateHouse[] = ""; //最後一天以後印空白
-        }
+for ($i = 0; $i < (6 - $lastWeekday); $i++) {
+    $dateHouse[] = ""; //最後一天以後印空白
+}
 
-        ?>
+?>
         <!-- 萬年曆中間面板 開始 -->
         <aside>
           <!-- 左邊隨機圖 開始 -->
           <figure class="img">
-            <img src="./img/month<?= $month; ?>-<?= rand(1, 2) ?>.jpg" width="280vw" height="650vh">
+            <img src="./img/month<?=$month;?>-<?=rand(1, 2)?>.jpg" width="280vw" height="650vh">
           </figure>
           <!-- 左邊隨機圖 結束 -->
           <!-- 印出萬年曆標題 開始-->
@@ -629,33 +632,31 @@ switch ($month) {
             <?php
 
 foreach ($dateHouse as $k => $day) {
-  if($day==$today){
-    $hol='today';
-  }
-  else if($k % 7 == 0 || $k % 7 == 6){
-    $hol='weekend';
-  }
-  else{
-    $hol='';
-  }
-  // $hol = ($k % 7 == 0 || $k % 7 == 6) ? 'weekend' : ""; //判定是否為假日
-  if (!empty($day)) {
-    $dayFormat = date("j", strtotime($day));
-    echo "<div class='{$hol}'>{$dayFormat}</div>";
-  } else {
-    echo "<div class='{$hol}'></div>";
-  }
+    if ($day == $today) {
+        $hol = 'today';
+    } else if ($k % 7 == 0 || $k % 7 == 6) {
+        $hol = 'weekend';
+    } else {
+        $hol = '';
+    }
+    // $hol = ($k % 7 == 0 || $k % 7 == 6) ? 'weekend' : ""; //判定是否為假日
+    if (!empty($day)) {
+        $dayFormat = date("j", strtotime($day));
+        echo "<div class='{$hol}'>{$dayFormat}</div>";
+    } else {
+        echo "<div class='{$hol}'></div>";
+    }
 }
-            // foreach ($dateHouse as $k => $day) {
-            //   $hol = ($k % 7 == 0 || $k % 7 == 6) ? 'weekend' : ""; //判定是否為假日
-            //   if (!empty($day)) {
-            //     $dayFormat = date("j", strtotime($day));
-            //     echo "<div class='{$hol}'>{$dayFormat}</div>";
-            //   } else {
-            //     echo "<div class='{$hol}'></div>";
-            //   }
-            // }
-            ?>
+// foreach ($dateHouse as $k => $day) {
+//   $hol = ($k % 7 == 0 || $k % 7 == 6) ? 'weekend' : ""; //判定是否為假日
+//   if (!empty($day)) {
+//     $dayFormat = date("j", strtotime($day));
+//     echo "<div class='{$hol}'>{$dayFormat}</div>";
+//   } else {
+//     echo "<div class='{$hol}'></div>";
+//   }
+// }
+?>
           </div>
           <!-- 萬年曆結束 -->
         </aside>
@@ -665,10 +666,10 @@ foreach ($dateHouse as $k => $day) {
     </article>
     <!-- 毛玻璃外框 結束 -->
               <span class="nav3">
-            <a href="index.php?year=<?= $nextYear; ?>&month=<?= $nextMonth; ?>">►</a>
+            <a href="index.php?year=<?=$nextYear;?>&month=<?=$nextMonth;?>">►</a>
           </span>
               <span class="nav4">
-            <a href="index.php?year=<?= $nextYear+1; ?>&month=<?= $nextMonth-1; ?>">►►</a>
+            <a href="index.php?year=<?=$nextYear + 1;?>&month=<?=$nextMonth - 1;?>">►►</a>
           </span>
     </nav>
 
