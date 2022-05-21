@@ -178,7 +178,7 @@
       /* height: 65px; */
       height: 12%;
       background: rgba(255, 255, 255, 0.5);
-      font-size: 25px;
+      font-size: 5rem;
       text-transform: uppercase;
       font-weight: 900;
       backdrop-filter: blur(25px);
