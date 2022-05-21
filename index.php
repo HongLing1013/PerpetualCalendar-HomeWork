@@ -158,7 +158,7 @@
       /* width: 950px; */
       width: 70vw;
       /* height: 580px; */
-      height: 90vh;
+      height: 85vh;
       border-radius: 15px;
     }
 
@@ -231,7 +231,7 @@
     }
 
     .table {
-      width: 52.85vw;
+      width: 52.29vw;
       height:73.5vh;
       display: flex;
       flex-wrap: wrap;
@@ -242,7 +242,7 @@
 
     .table div {
       display: inline-block;
-      width: 7.55vw;
+      width: 7.41vw;
       height: 10.5vh;
       border: 1px solid rgba(255, 255, 255, 0.2);
       box-sizing: border-box;
@@ -620,7 +620,7 @@ switch ($month) {
         <aside>
           <!-- 左邊隨機圖 開始 -->
           <figure class="img">
-            <img src="./img/month<?= $month; ?>-<?= rand(1, 2) ?>.jpg" width="310vw" height="665vh">
+            <img src="./img/month<?= $month; ?>-<?= rand(1, 2) ?>.jpg" width="280vw" height="650vh">
           </figure>
           <!-- 左邊隨機圖 結束 -->
           <!-- 印出萬年曆標題 開始-->
