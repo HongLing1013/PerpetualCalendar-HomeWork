@@ -158,7 +158,7 @@
       /* width: 950px; */
       width: 70vw;
       /* height: 580px; */
-      height: 80vh;
+      height: 90vh;
       border-radius: 15px;
     }
 
@@ -282,19 +282,23 @@
       margin: auto; */
       display: flex;
       justify-content: space-between;
-      flex-basis: 90%;
+      flex-basis: 100%;
     }
 
     .nav1 {
-      flex-basis: 15%;
+      flex-basis: 10%;
       margin-top: 40vh;
       justify-content: center;
+      margin-right: 0.5vw;
+      margin-left: 0.5vw;
     }
     
     .nav2 {
-      flex-basis: 15%;
+      flex-basis: 10%;
       margin-top: 40vh;
       justify-content: center;
+      margin-right: 0.5vw;
+      margin-left: 0.5vw;
     }
 
     /* 上下月調整按鈕 開始 */
@@ -303,9 +307,9 @@
       display: flex;
       justify-content: center;
       font-size: 20px;
-    width: 100px;
-    height: 50px;
-    line-height: 60px;
+    width: 60px;
+    height: 60px;
+    line-height: 65px;
     text-align: center;
     color: #fff;
     text-decoration: none;
@@ -351,9 +355,9 @@
       display: flex;
       justify-content: center;
     font-size: 20px;
-    width: 100px;
-    height: 50px;
-    line-height: 60px;
+    width: 60px;
+    height: 60px;
+    line-height: 65px;
     text-align: center;
     color: #fff;
     text-decoration: none;
@@ -457,6 +461,9 @@ switch ($month) {
 
     <nav class="nav">
     <span class="nav1">
+            <a href="index.php?year=<?= $prevYear-1; ?>&month=<?= $prevMonth+1; ?>">◄◄</a>
+          </span>
+    <span class="nav1">
             <a href="index.php?year=<?= $prevYear; ?>&month=<?= $prevMonth; ?>">◄</a>
           </span>
     <!-- 毛玻璃外框 開始 -->
@@ -470,7 +477,7 @@ switch ($month) {
           </span> -->
           <!-- 月份標題圖 開始 -->
           <span>
-            <img src="./header_img/<?= $month;?>.png" alt="<?= $month;?>" width="245vw" height="50vh">
+            <img src="./header_img/<?= $month;?>.png" alt="<?= $month;?>" width="245vw" height="80vh">
           </span>
           <!-- 月份標題圖 結束 -->
           <!-- <span>
@@ -543,6 +550,9 @@ switch ($month) {
     <!-- 毛玻璃外框 結束 -->
               <span class="nav2">
             <a href="index.php?year=<?= $nextYear; ?>&month=<?= $nextMonth; ?>">►</a>
+          </span>
+              <span class="nav2">
+            <a href="index.php?year=<?= $nextYear+1; ?>&month=<?= $nextMonth-1; ?>">►►</a>
           </span>
     </nav>
 
