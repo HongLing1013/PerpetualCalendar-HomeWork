@@ -155,9 +155,9 @@
     /* 毛玻璃外框 開始 */
     .glass {
       position: relative;
-      padding: 0px;
-      margin: 0px;
-      font-size: 20px;
+      padding: 0;
+      margin: 0;
+      font-size: 1vmin;
       background: rgba(255, 255, 255, 0.3);
       /* width: 950px; */
       width: 70vw;
@@ -181,22 +181,21 @@
       /* height: 65px; */
       height: 12%;
       background: rgba(255, 255, 255, 0.5);
-      font-size: 5rem;
+      font-size: 9vmin;
       text-transform: uppercase;
       font-weight: 900;
       backdrop-filter: blur(25px);
       border-radius: 15px;
       transition: all 0.8s ease-in-out;
-      line-height: 15px;
     }
     /* 標題小毛玻璃 結束 */
 
     /* 標題小毛玻璃動態 開始 */
     .glass:hover::before {
       height: 4%;
-      top: 5px;
+      top: 1vh;
       transform: translateY(-70%);
-      font-size: 23px;
+      font-size: 4vmin;
     }
     /* 標題小毛玻璃動態 結束 */
 
@@ -229,10 +228,10 @@
     .nav1>a{
       display: flex;
       justify-content: center;
-      font-size: 20px;
-      width: 60px;
-      height: 60px;
-      line-height: 65px;
+      font-size: 2.4vmin;
+      width: 3.2vw;
+      height:6.5vh;;
+      line-height: 6.6vh;
       text-align: center;
       color: #fff;
       text-decoration: none;
@@ -285,10 +284,10 @@
     .nav2>a{
       display: flex;
       justify-content: center;
-      font-size: 20px;
-      width: 60px;
-      height: 60px;
-      line-height: 65px;
+      font-size: 3vmin;
+      width: 3.2vw;
+      height: 6.5vh;
+      line-height: 6.6vh;
       text-align: center;
       color: #fff;
       text-decoration: none;
@@ -342,10 +341,10 @@
     .nav3>a{
       display: flex;
       justify-content: center;
-      font-size: 20px;
-      width: 60px;
-      height: 60px;
-      line-height: 65px;
+      font-size: 3vmin;
+      width: 3.2vw;
+      height: 6.5vh;
+      line-height: 6.6vh;
       text-align: center;
       color: #fff;
       text-decoration: none;
@@ -397,10 +396,10 @@
       .nav4>a{
         display: flex;
         justify-content: center;
-        font-size: 20px;
-        width: 60px;
-        height: 60px;
-        line-height: 65px;
+        font-size: 2.4vmin;
+        width: 3.2vw;
+        height: 6.5vh;
+        line-height: 6.6vh;
         text-align: center;
         color: #fff;
         text-decoration: none;
@@ -470,8 +469,8 @@
       display: flex;
       flex-wrap: wrap;
       align-content: baseline;
-      margin-left: 1px;
-      margin-top: 1px;
+      margin-left: 0.1vw;
+      margin-top: 1vh;
     }
 
     .table div {
@@ -480,12 +479,9 @@
       height: 10.5vh;
       border: 1px solid rgba(255, 255, 255, 0.2);
       box-sizing: border-box;
-      margin-left: -1px;
-      margin-top: -1px;
       text-align: center;
-      line-height: 80px;
-      font-size: 35px;
-      padding-top: 0px;
+      line-height: 8vh;
+      font-size: 3vmin;
     }
 
     .table>div:not(.weekend,.today){
@@ -503,7 +499,7 @@
       font-weight: bold;
       height: 9vh;
       /* line-height: auto; */
-      font-size: 55px;
+      font-size: 5.5vmin;
       background: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
       background: -webkit-linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
       background-clip: text;
@@ -523,9 +519,10 @@
 
     /* 今日變色 */
     .today{
-      line-height: 35px;
-      width: 35px;
-      height: 35px;
+      line-height: 8vh;
+      font-size: 3vmin;
+      /* width: 3vw;
+      height: 35vh; */
       background: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
       color: white;
       border-radius: 50%;
@@ -535,7 +532,7 @@
     .festivalday0101::before{
       content:"元旦";
       color: #020f75;
-      /* font-size: 0.5rem;
+      /* font-size: 2vmin;
       font-weight: bold;
       background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
       background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
