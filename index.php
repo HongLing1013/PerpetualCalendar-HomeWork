@@ -158,7 +158,7 @@
       /* width: 950px; */
       width: 70vw;
       /* height: 580px; */
-      height: 85vh;
+      height: 80vh;
       border-radius: 15px;
     }
 
@@ -253,7 +253,7 @@
       font-size: 35px;
     }
     
-    .table>div:not(.weekend){
+    .table>div:not(.weekend,.today){
       font-weight: bold;
       background: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
   background: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
@@ -517,7 +517,12 @@
         }
 
         .today{
-          color: pink;
+          font-weight: bold;
+      background: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+  background: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
         }
     /* 萬年曆排版 結束 */
   </style>
@@ -634,15 +639,34 @@ switch ($month) {
             <div class='header'>Sat</div>
             <!-- 印出萬年曆標題 結束-->
             <?php
-            foreach ($dateHouse as $k => $day) {
-              $hol = ($k % 7 == 0 || $k % 7 == 6) ? 'weekend' : ""; //判定是否為假日
-              if (!empty($day)) {
-                $dayFormat = date("j", strtotime($day));
-                echo "<div class='{$hol}'>{$dayFormat}</div>";
-              } else {
-                echo "<div class='{$hol}'></div>";
-              }
-            }
+
+foreach ($dateHouse as $k => $day) {
+  if($day==$today){
+    $hol='today';
+  }
+  else if($k % 7 == 0 || $k % 7 == 6){
+    $hol='weekend';
+  }
+  else{
+    $hol='';
+  }
+  // $hol = ($k % 7 == 0 || $k % 7 == 6) ? 'weekend' : ""; //判定是否為假日
+  if (!empty($day)) {
+    $dayFormat = date("j", strtotime($day));
+    echo "<div class='{$hol}'>{$dayFormat}</div>";
+  } else {
+    echo "<div class='{$hol}'></div>";
+  }
+}
+            // foreach ($dateHouse as $k => $day) {
+            //   $hol = ($k % 7 == 0 || $k % 7 == 6) ? 'weekend' : ""; //判定是否為假日
+            //   if (!empty($day)) {
+            //     $dayFormat = date("j", strtotime($day));
+            //     echo "<div class='{$hol}'>{$dayFormat}</div>";
+            //   } else {
+            //     echo "<div class='{$hol}'></div>";
+            //   }
+            // }
             ?>
           </div>
           <!-- 萬年曆結束 -->
