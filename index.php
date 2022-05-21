@@ -11,7 +11,7 @@
       box-sizing: border-box;
       padding: 0;
       margin: 0;
-      font-family: inherit;
+      font-family: '華康流隸體';
     }
     /* 動態漸層背景 開始 */
     .bg {
@@ -174,7 +174,7 @@
       top: 0.5rem;
       left: 0.5rem;
       /* width: 935px; */
-      width: 69vw;
+      width: 68.5vw;
       /* height: 65px; */
       height: 10%;
       background: rgba(255, 255, 255, 0.5);
@@ -204,6 +204,7 @@
       color: transparent; 
       -webkit-text-stroke: 1px lightslategray; 
       letter-spacing: 0.04em; 
+      flex-basis: 100%;
     }
 
     /* 標題小毛玻璃文字效果 結束 */
@@ -217,6 +218,7 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
+      flex-basis: 100%;
     }
 
     aside {
@@ -280,27 +282,29 @@
       margin: auto; */
       display: flex;
       justify-content: space-between;
-      flex-basis: 100%;
+      flex-basis: 90%;
     }
 
     .nav1 {
-      flex-basis: 33%;
+      flex-basis: 15%;
       margin-top: 40vh;
       justify-content: center;
     }
     
     .nav2 {
-      flex-basis: 33%;
+      flex-basis: 15%;
       margin-top: 40vh;
       justify-content: center;
     }
 
     /* 上下月調整按鈕 開始 */
-    
+    /* 左邊上個月的按鈕 */
     .nav1>a{
-      font-size: 30px;
-    width: 200px;
-    height: 60px;
+      display: flex;
+      justify-content: center;
+      font-size: 20px;
+    width: 100px;
+    height: 50px;
     line-height: 60px;
     text-align: center;
     color: #fff;
@@ -341,10 +345,14 @@
     filter: blur(20px);
     opacity: 1;
 }
+
+/* 右邊下個月的按鈕 */
     .nav2>a{
-    font-size: 30px;
-    width: 200px;
-    height: 60px;
+      display: flex;
+      justify-content: center;
+    font-size: 20px;
+    width: 100px;
+    height: 50px;
     line-height: 60px;
     text-align: center;
     color: #fff;
@@ -449,7 +457,7 @@ switch ($month) {
 
     <nav class="nav">
     <span class="nav1">
-            <a href="index.php?year=<?= $prevYear; ?>&month=<?= $prevMonth; ?>">　◄　</a>
+            <a href="index.php?year=<?= $prevYear; ?>&month=<?= $prevMonth; ?>">◄</a>
           </span>
     <!-- 毛玻璃外框 開始 -->
     <article class="glass" data-title="<?= $year; ?>">
@@ -462,7 +470,7 @@ switch ($month) {
           </span> -->
           <!-- 月份標題圖 開始 -->
           <span>
-            <img src="./header_img/<?= $month;?>.png" alt="<?= $month;?>" width="250vw" height="55vh">
+            <img src="./header_img/<?= $month;?>.png" alt="<?= $month;?>" width="245vw" height="50vh">
           </span>
           <!-- 月份標題圖 結束 -->
           <!-- <span>
@@ -534,7 +542,7 @@ switch ($month) {
     </article>
     <!-- 毛玻璃外框 結束 -->
               <span class="nav2">
-            <a href="index.php?year=<?= $nextYear; ?>&month=<?= $nextMonth; ?>">　►　</a>
+            <a href="index.php?year=<?= $nextYear; ?>&month=<?= $nextMonth; ?>">►</a>
           </span>
     </nav>
 
