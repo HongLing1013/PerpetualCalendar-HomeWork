@@ -480,7 +480,9 @@
       margin-top: -1px;
       text-align: center;
       line-height: 80px;
-      font-size: 35px;
+      /* font-size: 35px; */
+      font-size: 20px;
+      padding-top: 8px;
     }
 
     .table>div:not(.weekend,.today){
@@ -528,9 +530,15 @@
         }
 
         .festivalday0214::after{
-          font-size: 2rem;
+          font-size: 0.5rem;
           content:"情人節";
-          color:hotpink;
+          font-weight: bold;
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+  background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
         }
 
     /* 萬年曆排版 結束 */
@@ -603,6 +611,7 @@ $lastDay = $year . "-" . $month . "-" . $monthDays; //這個月最後一天
 $today = date("Y-m-d"); //取值今天
 $lastWeekday = date("w", strtotime($lastDay)); //這個月最後一天是星期幾
 $dateHouse = [];
+$sday = date("md" , strtotime($today));
 
 for ($i = 0; $i < $firstWeekday; $i++) {
     $dateHouse[] = ""; //一號以前印空白
