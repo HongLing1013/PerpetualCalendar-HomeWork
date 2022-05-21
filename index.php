@@ -526,6 +526,11 @@
     color: white;
     border-radius: 50%;
         }
+
+        .festivalday0214::after{
+          content:"情人節";
+          color:hotpink;
+        }
     /* 萬年曆排版 結束 */
   </style>
 </head>
@@ -636,13 +641,15 @@ foreach ($dateHouse as $k => $day) {
         $hol = 'today';
     } else if ($k % 7 == 0 || $k % 7 == 6) {
         $hol = 'weekend';
-    } else {
+    } else if ($sday = date("md" , strtotime($day))){
+      $hol = 'sday';
+    }else{
         $hol = '';
     }
     // $hol = ($k % 7 == 0 || $k % 7 == 6) ? 'weekend' : ""; //判定是否為假日
     if (!empty($day)) {
         $dayFormat = date("j", strtotime($day));
-        echo "<div class='{$hol}'>{$dayFormat}</div>";
+        echo "<div class='{$hol}'>{$dayFormat}<div class='festivalday{$sday}'></div></div>";
     } else {
         echo "<div class='{$hol}'></div>";
     }
