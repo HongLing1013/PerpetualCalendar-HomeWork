@@ -7,6 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>線上月曆</title>
   <style>
+    *{
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      font-family: inherit;
+    }
     /* 動態漸層背景 開始 */
     .bg {
       margin: 0;
@@ -137,7 +143,6 @@
       z-index: 10;
       display: flex;
       min-height: 100vh;
-      width: 100%;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
@@ -150,8 +155,10 @@
       margin: 0px;
       font-size: 20px;
       background: rgba(255, 255, 255, 0.3);
-      width: 950px;
-      height: 580px;
+      /* width: 950px; */
+      width: 70vw;
+      /* height: 580px; */
+      height: 80vh;
       border-radius: 15px;
     }
 
@@ -166,8 +173,10 @@
       position: absolute;
       top: 0.5rem;
       left: 0.5rem;
-      width: 935px;
-      height: 70px;
+      /* width: 935px; */
+      width: 69vw;
+      /* height: 65px; */
+      height: 10%;
       background: rgba(255, 255, 255, 0.5);
       font-size: 25px;
       text-transform: uppercase;
@@ -191,8 +200,10 @@
     /* 標題小毛玻璃動態 結束 */
 
     /* 標題小毛玻璃文字效果 開始 */
-    [data-title] {
-      color: rgba(0, 0, 0, 0.5);
+    [data-title]{
+      color: transparent; 
+      -webkit-text-stroke: 1px lightslategray; 
+      letter-spacing: 0.04em; 
     }
 
     /* 標題小毛玻璃文字效果 結束 */
@@ -218,8 +229,8 @@
     }
 
     .table {
-      width: 644px;
-      height: 497px;
+      width: 52.85vw;
+      height:73.5vh;
       display: flex;
       flex-wrap: wrap;
       align-content: baseline;
@@ -229,8 +240,8 @@
 
     .table div {
       display: inline-block;
-      width: 92px;
-      height: 71px;
+      width: 7.55vw;
+      height: 10.5vh;
       border: 1px solid rgba(255, 255, 255, 0.2);
       box-sizing: border-box;
       margin-left: -1px;
@@ -238,8 +249,12 @@
       text-align: center;
       line-height: 80px;
       font-size: 35px;
-      background: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
-  background: -webkit-linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+    }
+    
+    .table>div:not(.weekend){
+      font-weight: bold;
+      background: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+  background: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -249,15 +264,16 @@
       background: rgba(0, 0, 0, 0.5);
       /* color: white; */
       font-weight: bold;
-      height: 60px;
-      line-height: 60px;
-      font-size: 35px;
+      height: 9vh;
+      /* line-height: auto; */
+      font-size: 55px;
+      
       background: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
-  background: -webkit-linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-    }
+      background: -webkit-linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      }
 
     .nav {
       display: flex;
@@ -266,7 +282,12 @@
     }
 
     .weekend {
-            background: black;
+      font-weight: bold;
+      background: linear-gradient(to top, #3b41c5 0%, #a981bb 49%, #ffc8a9 100%);
+  background: linear-gradient(to top, #3b41c5 0%, #a981bb 49%, #ffc8a9 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
         }
     /* 萬年曆排版 結束 */
   </style>
@@ -322,7 +343,7 @@ switch ($month) {
           </span>
           <!-- 月份標題圖 開始 -->
           <span>
-            <img src="./header_img/<?= $month;?>.png" alt="<?= $month;?>" width="160" height="45">
+            <img src="./header_img/<?= $month;?>.png" alt="<?= $month;?>" width="250vw" height="55vh">
           </span>
           <!-- 月份標題圖 結束 -->
           <span>
@@ -361,7 +382,7 @@ switch ($month) {
         <aside>
           <!-- 左邊隨機圖 開始 -->
           <figure class="img">
-            <img src="./img/month<?= $month; ?>-<?= rand(1, 2) ?>.jpg" width="240" height="510">
+            <img src="./img/month<?= $month; ?>-<?= rand(1, 2) ?>.jpg" width="310vw" height="665vh">
           </figure>
           <!-- 左邊隨機圖 結束 -->
           <!-- 印出萬年曆標題 開始-->
