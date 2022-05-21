@@ -13,11 +13,13 @@
       margin: 0;
       font-family: '華康流隸體';
     }
+
     /* 動態漸層背景 開始 */
     .bg {
       margin: 0;
       min-height: 100vh;
       background-color: #F5F5DC;
+
       /* 設定背景色塊 開始*/
       background-image:
         /* 	LightSkyBlue 淡藍 */
@@ -31,6 +33,7 @@
         /* 	Tomato 橘紅 */
         radial-gradient(closest-side, rgba(255, 99, 71, 1), rgba(255, 99, 71, 0));
       /* 設定背景色塊 結束*/
+
       /* 設定背景色塊大小 開始*/
       background-size:
         130vmax 130vmax,
@@ -39,6 +42,7 @@
         100vmax 100vmax,
         90vmax 90vmax;
       /* 設定背景色塊大小 結束*/
+
       /* 設定背景色塊的位子 開始*/
       background-position:
         -80vmax -80vmax,
@@ -47,13 +51,14 @@
         -30vmax -10vmax,
         50vmax 50vmax;
       /* 設定背景色塊的位子 結束*/
+
       /* 背景不重複 */
       background-repeat: no-repeat;
       /* 動畫設定 時長3秒 線性加速度 無限重複 */
       animation: 3s movement linear infinite;
     }
-
     /* 漸層背景 結束 */
+
     /* 背景模糊 開始 */
     .bg::after {
       content: '';
@@ -67,8 +72,8 @@
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
     }
-
     /* 背景模糊結束 */
+
     /* 動態背景 開始 */
     @keyframes movement {
 
@@ -134,7 +139,6 @@
       }
 
     }
-
     /* 動態背景 結束 */
 
     .box {
@@ -161,7 +165,6 @@
       height: 80vh;
       border-radius: 15px;
     }
-
     /* 毛玻璃外框 結束 */
 
     /* 標題小毛玻璃 開始 */
@@ -186,7 +189,6 @@
       transition: all 0.8s ease-in-out;
       line-height: 15px;
     }
-
     /* 標題小毛玻璃 結束 */
 
     /* 標題小毛玻璃動態 開始 */
@@ -196,7 +198,6 @@
       transform: translateY(-70%);
       font-size: 23px;
     }
-
     /* 標題小毛玻璃動態 結束 */
 
     /* 標題小毛玻璃文字效果 開始 */
@@ -206,9 +207,9 @@
       letter-spacing: 0.04em;
       flex-basis: 100%;
     }
-
     /* 標題小毛玻璃文字效果 結束 */
 
+    /* 切換月份年份按鈕 開始 */
     .nav {
       /* padding: auto;
       margin: auto; */
@@ -217,6 +218,7 @@
       flex-basis: 100%;
     }
 
+    /* 左邊前一年的按鈕 開始 */
     .nav1 {
       flex-basis: 10%;
       margin-top: 40vh;
@@ -224,6 +226,55 @@
       margin-left: 3vw;
     }
 
+    .nav1>a{
+      display: flex;
+      justify-content: center;
+      font-size: 20px;
+      width: 60px;
+      height: 60px;
+      line-height: 65px;
+      text-align: center;
+      color: #fff;
+      text-decoration: none;
+      background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
+      border-radius: 40px;
+      background-size: 400%;
+      text-transform: uppercase;
+    }
+
+    .nav1>a:hover{
+      animation: animate 8s linear infinite;
+    }
+
+    @keyframes animate{
+      0%{
+          background-position: 0%;
+      }
+      100%{
+          background-position: 400%;
+      }
+    }
+
+    .nav1>a::before{
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      z-index: -1;
+      background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
+      border-radius: 40px;
+      background-size: 400%;
+      opacity: -1;
+      transition: 0.5s;
+    }
+
+    .nav1>a:hover::before{
+      filter: blur(20px);
+      opacity: 1;
+    }
+      /* 左邊前一年的按鈕 結束 */
+
+    /* 左邊上個月的按鈕 開始 */
     .nav2 {
       flex-basis: 10%;
       margin-top: 40vh;
@@ -231,6 +282,55 @@
       margin-right: 0.1vw;
       margin-left: 0.1vw;
     }
+    .nav2>a{
+      display: flex;
+      justify-content: center;
+      font-size: 20px;
+      width: 60px;
+      height: 60px;
+      line-height: 65px;
+      text-align: center;
+      color: #fff;
+      text-decoration: none;
+      background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
+      border-radius: 40px;
+      background-size: 400%;
+      text-transform: uppercase;
+    }
+
+    .nav2>a:hover{
+      animation: animate 8s linear infinite;
+    }
+
+    @keyframes animate{
+      0%{
+        background-position: 0%;
+      }
+      100%{
+        background-position: 400%;
+      }
+    }
+
+    .nav2>a::before{
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      z-index: -1;
+      background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
+      border-radius: 40px;
+      background-size: 400%;
+      opacity: -1;
+      transition: 0.5s;
+    }
+
+    .nav2>a:hover::before{
+      filter: blur(20px);
+      opacity: 1;
+    }
+      /* 左邊上個月的按鈕 結束*/
+
+    /* 右邊後一個月的按鈕 開始 */
     .nav3 {
       flex-basis: 10%;
       margin-top: 40vh;
@@ -238,206 +338,110 @@
       margin-right: 0.1vw;
       margin-left: 2.5vw;
     }
-    .nav4 {
-      flex-basis: 10%;
-      margin-top: 40vh;
-      justify-content: flex-end;
-      margin-right: 0vw;
-    }
-
-    /* 按鈕 開始 */
-    /* 左邊前一年的按鈕 */
-    .nav1>a{
-      display: flex;
-      justify-content: center;
-      font-size: 20px;
-    width: 60px;
-    height: 60px;
-    line-height: 65px;
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-    background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
-    border-radius: 40px;
-    background-size: 400%;
-    text-transform: uppercase;
-}
-
-.nav1>a:hover{
-    animation: animate 8s linear infinite;
-}
-
-@keyframes animate{
-    0%{
-        background-position: 0%;
-    }
-    100%{
-        background-position: 400%;
-    }
-}
-
-.nav1>a::before{
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    z-index: -1;
-    background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
-    border-radius: 40px;
-    background-size: 400%;
-    opacity: -1;
-    transition: 0.5s;
-}
-
-.nav1>a:hover::before{
-    filter: blur(20px);
-    opacity: 1;
-}
-
-/* 左邊上個月的按鈕 */
-    .nav2>a{
-      display: flex;
-      justify-content: center;
-    font-size: 20px;
-    width: 60px;
-    height: 60px;
-    line-height: 65px;
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-    background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
-    border-radius: 40px;
-    background-size: 400%;
-    text-transform: uppercase;
-}
-
-.nav2>a:hover{
-    animation: animate 8s linear infinite;
-}
-
-@keyframes animate{
-    0%{
-        background-position: 0%;
-    }
-    100%{
-        background-position: 400%;
-    }
-}
-
-.nav2>a::before{
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    z-index: -1;
-    background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
-    border-radius: 40px;
-    background-size: 400%;
-    opacity: -1;
-    transition: 0.5s;
-}
-
-.nav2>a:hover::before{
-    filter: blur(20px);
-    opacity: 1;
-}
-/* 右邊後一個月的按鈕 */
+    
     .nav3>a{
       display: flex;
       justify-content: center;
-    font-size: 20px;
-    width: 60px;
-    height: 60px;
-    line-height: 65px;
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-    background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
-    border-radius: 40px;
-    background-size: 400%;
-    text-transform: uppercase;
-}
-
-.nav3>a:hover{
-    animation: animate 8s linear infinite;
-}
-
-@keyframes animate{
-    0%{
-        background-position: 0%;
+      font-size: 20px;
+      width: 60px;
+      height: 60px;
+      line-height: 65px;
+      text-align: center;
+      color: #fff;
+      text-decoration: none;
+      background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
+      border-radius: 40px;
+      background-size: 400%;
+      text-transform: uppercase;
     }
-    100%{
-        background-position: 400%;
+    
+    .nav3>a:hover{
+      animation: animate 8s linear infinite;
     }
-}
-
-.nav3>a::before{
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    z-index: -1;
-    background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
-    border-radius: 40px;
-    background-size: 400%;
-    opacity: -1;
-    transition: 0.5s;
-}
-
-.nav3>a:hover::before{
-    filter: blur(20px);
-    opacity: 1;
-}
-/* 右邊後一年的按鈕 */
-    .nav4>a{
-      display: flex;
-      justify-content: center;
-    font-size: 20px;
-    width: 60px;
-    height: 60px;
-    line-height: 65px;
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-    background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
-    border-radius: 40px;
-    background-size: 400%;
-    text-transform: uppercase;
-}
-
-.nav4>a:hover{
-    animation: animate 8s linear infinite;
-}
-
-@keyframes animate{
-    0%{
-        background-position: 0%;
+    
+    @keyframes animate{
+        0%{
+            background-position: 0%;
+        }
+        100%{
+            background-position: 400%;
+        }
     }
-    100%{
-        background-position: 400%;
+    
+    .nav3>a::before{
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        z-index: -1;
+        background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
+        border-radius: 40px;
+        background-size: 400%;
+        opacity: -1;
+        transition: 0.5s;
     }
-}
+    
+    .nav3>a:hover::before{
+        filter: blur(20px);
+        opacity: 1;
+    }
+      /* 右邊後一個月的按鈕 結束 */
 
-.nav4>a::before{
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    z-index: -1;
-    background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
-    border-radius: 40px;
-    background-size: 400%;
-    opacity: -1;
-    transition: 0.5s;
-}
-
-.nav4>a:hover::before{
-    filter: blur(20px);
-    opacity: 1;
-}
-
-
-    /* 按鈕 結束 */
+      /* 右邊後一年的按鈕 開始 */
+      .nav4 {
+        flex-basis: 10%;
+        margin-top: 40vh;
+        justify-content: flex-end;
+        margin-right: 0vw;
+      }
+      .nav4>a{
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        width: 60px;
+        height: 60px;
+        line-height: 65px;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
+        border-radius: 40px;
+        background-size: 400%;
+        text-transform: uppercase;
+      }
+  
+      .nav4>a:hover{
+        animation: animate 8s linear infinite;
+      }
+  
+      @keyframes animate{
+        0%{
+          background-position: 0%;
+        }
+        100%{
+          background-position: 400%;
+        }
+      }
+  
+      .nav4>a::before{
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        z-index: -1;
+        background: linear-gradient(90deg , #85d6fc , #f898cf , #fff59e , #85d6fc );
+        border-radius: 40px;
+        background-size: 400%;
+        opacity: -1;
+        transition: 0.5s;
+      }
+  
+      .nav4>a:hover::before{
+        filter: blur(20px);
+        opacity: 1;
+      }
+      /* 右邊後一年的按鈕 結束 */
+    /* 切換月份年份按鈕 結束 */
 
     /* 萬年曆排版 開始 */
     .wrapper {
@@ -487,10 +491,10 @@
     .table>div:not(.weekend,.today){
       font-weight: bold;
       background: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
-  background: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+      background: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .table div.header {
@@ -505,39 +509,42 @@
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
-      }
+    }
 
-
-
+    /* 六日變色 */
     .weekend {
       font-weight: bold;
       background: linear-gradient(to top, #3b41c5 0%, #a981bb 49%, #ffc8a9 100%);
-  background: linear-gradient(to top, #3b41c5 0%, #a981bb 49%, #ffc8a9 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-        }
+      background: linear-gradient(to top, #3b41c5 0%, #a981bb 49%, #ffc8a9 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
 
-        .today{
-    line-height: 35px;
-    width: 35px;
-    height: 35px;
-    background: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
-    color: white;
-    border-radius: 50%;
-        }
+    /* 今日變色 */
+    .today{
+      line-height: 35px;
+      width: 35px;
+      height: 35px;
+      background: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+      color: white;
+      border-radius: 50%;
+    }
 
-        .festivalday0214::after{
-          font-size: 0.5rem;
-          content:"情人節";
-          font-weight: bold;
+    /* 各節日變色 開始 */
+    .festivalday0101::before{
+      content:"元旦";
+      color: #020f75;
+      /* font-size: 0.5rem;
+      font-weight: bold;
       background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
-  background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-
-        }
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent; */
+    }
+    
+    /* 各節日變色 結束 */
 
     /* 萬年曆排版 結束 */
   </style>
@@ -582,7 +589,7 @@ switch ($month) {
 <body class="bg">
   <!-- 動態背景 開始 -->
   <main class="box">
-
+  <!-- 切換月份 開始 -->
     <nav class="nav">
     <span class="nav1">
             <a href="index.php?year=<?=$prevYear - 1;?>&month=<?=$prevMonth + 1;?>">◄◄</a>
@@ -599,40 +606,44 @@ switch ($month) {
             <img src="./header_img/<?=$month;?>.png" alt="<?=$month;?>" width="245vw" height="80vh">
           </span>
           <!-- 月份標題圖 結束 -->
-        <!-- 萬年曆內容 -->
+
+        <!-- 萬年曆內容參數設定 開始 -->
         <?php
-// 設定各項參數
-$firstDay = $year . "-" . $month . "-1"; //這個月第一天的位子
-$firstWeekday = date("w", strtotime($firstDay)); //這個月第一天是星期幾
-$monthDays = date("t", strtotime($firstDay)); //這個月的總天數
-$lastDay = $year . "-" . $month . "-" . $monthDays; //這個月最後一天
-$today = date("Y-m-d"); //取值今天
-$lastWeekday = date("w", strtotime($lastDay)); //這個月最後一天是星期幾
-$dateHouse = [];
-$sday = date("md" , strtotime($today));
+        // 設定各項參數
+        $firstDay = $year . "-" . $month . "-1"; //這個月第一天的位子
+        $firstWeekday = date("w", strtotime($firstDay)); //這個月第一天是星期幾
+        $monthDays = date("t", strtotime($firstDay)); //這個月的總天數
+        $lastDay = $year . "-" . $month . "-" . $monthDays; //這個月最後一天
+        $today = date("Y-m-d"); //取值今天
+        $lastWeekday = date("w", strtotime($lastDay)); //這個月最後一天是星期幾
+        $dateHouse = [];
+        $sday = date("md" , strtotime($today));
 
-for ($i = 0; $i < $firstWeekday; $i++) {
-    $dateHouse[] = ""; //一號以前印空白
-}
+        for ($i = 0; $i < $firstWeekday; $i++) {
+            $dateHouse[] = ""; //一號以前印空白
+        }
 
-for ($i = 0; $i < $monthDays; $i++) {
-    $date = date("Y-m-d", strtotime("+$i days", strtotime($firstDay)));
-    //日期函數的年月日 換算成字串 字串印出來以後要+1
-    $dateHouse[] = $date;
-}
+        for ($i = 0; $i < $monthDays; $i++) {
+            $date = date("Y-m-d", strtotime("+$i days", strtotime($firstDay)));
+            //日期函數的年月日 換算成字串 字串印出來以後要+1
+            $dateHouse[] = $date;
+        }
 
-for ($i = 0; $i < (6 - $lastWeekday); $i++) {
-    $dateHouse[] = ""; //最後一天以後印空白
-}
+        for ($i = 0; $i < (6 - $lastWeekday); $i++) {
+            $dateHouse[] = ""; //最後一天以後印空白
+        }
+        ?>
+        <!-- 萬年曆內容參數設定 結束 -->
 
-?>
         <!-- 萬年曆中間面板 開始 -->
         <aside>
+
           <!-- 左邊隨機圖 開始 -->
           <figure class="img">
             <img src="./img/month<?=$month;?>-<?=rand(1, 2)?>.jpg" width="280vw" height="620vh">
           </figure>
           <!-- 左邊隨機圖 結束 -->
+
           <!-- 印出萬年曆標題 開始-->
           <div class="table">
             <div class='header'>Sun</div>
@@ -643,36 +654,30 @@ for ($i = 0; $i < (6 - $lastWeekday); $i++) {
             <div class='header'>Fri</div>
             <div class='header'>Sat</div>
             <!-- 印出萬年曆標題 結束-->
-            <?php
 
-foreach ($dateHouse as $k => $day) {
-    if ($day == $today) {
-        $hol = 'today';
-    } else if ($k % 7 == 0 || $k % 7 == 6) {
-        $hol = 'weekend';
-    } else if ($sday = date("md" , strtotime($day))){
-      $hol = 'sday';
-    }else{
-        $hol = '';
-    }
-    // $hol = ($k % 7 == 0 || $k % 7 == 6) ? 'weekend' : ""; //判定是否為假日
-    if (!empty($day)) {
-        $dayFormat = date("j", strtotime($day));
-        echo "<div class='{$hol}'><div class='festivalday{$sday}'>{$dayFormat}</div></div>";
-    } else {
-        echo "<div class='{$hol}'></div>";
-    }
-}
-// foreach ($dateHouse as $k => $day) {
-//   $hol = ($k % 7 == 0 || $k % 7 == 6) ? 'weekend' : ""; //判定是否為假日
-//   if (!empty($day)) {
-//     $dayFormat = date("j", strtotime($day));
-//     echo "<div class='{$hol}'>{$dayFormat}</div>";
-//   } else {
-//     echo "<div class='{$hol}'></div>";
-//   }
-// }
-?>
+            <!-- 印出萬年曆內容 開始 -->
+            <?php
+            foreach ($dateHouse as $k => $day) {
+                if ($day == $today) {
+                    $hol = 'today';
+                } else if ($k % 7 == 0 || $k % 7 == 6) {
+                    $hol = 'weekend';
+                } else if ($sday = date("md" , strtotime($day))){
+                  $hol = 'sday';
+                }else{
+                    $hol = '';
+                }
+                // $hol = ($k % 7 == 0 || $k % 7 == 6) ? 'weekend' : ""; //判定是否為假日
+                if (!empty($day)) {
+                    $dayFormat = date("j", strtotime($day));
+                    echo "<div class='{$hol}'><div class='festivalday{$sday}'>{$dayFormat}</div></div>";
+                } else {
+                    echo "<div class='{$hol}'></div>";
+                }
+            }
+            ?>
+            <!-- 印出萬年曆內容 結束 -->
+
           </div>
           <!-- 萬年曆結束 -->
         </aside>
@@ -682,13 +687,13 @@ foreach ($dateHouse as $k => $day) {
     </article>
     <!-- 毛玻璃外框 結束 -->
               <span class="nav3">
-            <a href="index.php?year=<?=$nextYear;?>&month=<?=$nextMonth;?>">►</a>
-          </span>
+                <a href="index.php?year=<?=$nextYear;?>&month=<?=$nextMonth;?>">►</a>
+              </span>
               <span class="nav4">
-            <a href="index.php?year=<?=$nextYear + 1;?>&month=<?=$nextMonth - 1;?>">►►</a>
-          </span>
+                <a href="index.php?year=<?=$nextYear + 1;?>&month=<?=$nextMonth - 1;?>">►►</a>
+              </span>
     </nav>
-
+  <!-- 切換月份 結束 -->
   </main>
   <!-- 動態背景 結束 -->
 </body>
