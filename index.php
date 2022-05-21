@@ -480,8 +480,7 @@
       margin-top: -1px;
       text-align: center;
       line-height: 80px;
-      /* font-size: 35px; */
-      font-size: 20px;
+      font-size: 35px;
       padding-top: 0px;
     }
 
