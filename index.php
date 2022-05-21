@@ -528,9 +528,11 @@
         }
 
         .festivalday0214::after{
+          font-size: 2rem;
           content:"情人節";
           color:hotpink;
         }
+
     /* 萬年曆排版 結束 */
   </style>
 </head>
@@ -649,7 +651,7 @@ foreach ($dateHouse as $k => $day) {
     // $hol = ($k % 7 == 0 || $k % 7 == 6) ? 'weekend' : ""; //判定是否為假日
     if (!empty($day)) {
         $dayFormat = date("j", strtotime($day));
-        echo "<div class='{$hol}'>{$dayFormat}<div class='festivalday{$sday}'></div></div>";
+        echo "<div class='{$hol}'><div class='festivalday{$sday}'>{$dayFormat}</div></div>";
     } else {
         echo "<div class='{$hol}'></div>";
     }
