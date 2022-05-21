@@ -482,7 +482,7 @@
       line-height: 80px;
       /* font-size: 35px; */
       font-size: 20px;
-      padding-top: 8px;
+      padding-top: 0px;
     }
 
     .table>div:not(.weekend,.today){
@@ -501,7 +501,6 @@
       height: 9vh;
       /* line-height: auto; */
       font-size: 55px;
-
       background: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
       background: -webkit-linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
       background-clip: text;
@@ -632,7 +631,7 @@ for ($i = 0; $i < (6 - $lastWeekday); $i++) {
         <aside>
           <!-- 左邊隨機圖 開始 -->
           <figure class="img">
-            <img src="./img/month<?=$month;?>-<?=rand(1, 2)?>.jpg" width="280vw" height="650vh">
+            <img src="./img/month<?=$month;?>-<?=rand(1, 2)?>.jpg" width="280vw" height="620vh">
           </figure>
           <!-- 左邊隨機圖 結束 -->
           <!-- 印出萬年曆標題 開始-->
