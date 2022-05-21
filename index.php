@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>線上月曆</title>
+  <title>蜜桃貓主題萬年曆</title>
   <style>
     *{
       box-sizing: border-box;
@@ -211,7 +211,7 @@
 
     /* 萬年曆排版 開始 */
     .wrapper {
-      width: 580px;
+      width: 60vw;
       margin: 1rem auto;
       /* 對齊方式 */
       display: flex;
@@ -520,9 +520,8 @@
           font-weight: bold;
       background: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
   background: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  color: white;
+  border-radius: 100px;
         }
     /* 萬年曆排版 結束 */
   </style>
@@ -579,22 +578,11 @@ switch ($month) {
     <article class="glass" data-title="<?= $year; ?>">
       <!-- 萬年曆樣式 開始 -->
       <section class="wrapper">
-        <!-- 控制切換月份的按鈕 開始-->
-        <!-- <nav class="nav">
-          <span>
-            <a href="index.php?year=<?= $prevYear; ?>&month=<?= $prevMonth; ?>">◄ Last Month</a>
-          </span> -->
           <!-- 月份標題圖 開始 -->
           <span>
             <img src="./header_img/<?= $month;?>.png" alt="<?= $month;?>" width="245vw" height="80vh">
           </span>
           <!-- 月份標題圖 結束 -->
-          <!-- <span>
-            <a href="index.php?year=<?= $nextYear; ?>&month=<?= $nextMonth; ?>">Next Month ►</a>
-          </span>
-        </nav> -->
-        <!-- 控制切換月份的按鈕 結束-->
-
         <!-- 萬年曆內容 -->
         <?php
         // 設定各項參數
