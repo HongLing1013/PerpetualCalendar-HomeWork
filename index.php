@@ -533,6 +533,12 @@
       content:"元旦";
       color: #020f75;
       font-size: 2.5vmin;
+      font-weight: bold;
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .festivalday0214::after{
@@ -551,102 +557,204 @@
       content:"和平紀念日";
       color: #020f75;
       font-size: 2.5vmin;
+      font-weight: bold;
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .festivalday0308::after{
       content:"婦女節";
       color: #020f75;
       font-size: 2.5vmin;
+      font-weight: bold;
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .festivalday0314::after{
       content:"白色情人節";
       color: #020f75;
       font-size: 2.5vmin;
+      font-weight: bold;
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .festivalday0329::after{
       content:"青年節";
       color: #020f75;
       font-size: 2.5vmin;
+      font-weight: bold;
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .festivalday0401::after{
       content:"愚人節";
       color: #020f75;
       font-size: 2.5vmin;
+      font-weight: bold;
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .festivalday0404::after{
       content:"兒童節";
       color: #020f75;
       font-size: 2.5vmin;
+      font-weight: bold;
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .festivalday0501::after{
       content:"勞動節";
       color: #020f75;
       font-size: 2.5vmin;
+      font-weight: bold;
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .festivalday0808::after{
       content:"父親節";
       color: #020f75;
       font-size: 2.5vmin;
+      font-weight: bold;
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .festivalday0903::after{
       content:"軍人節";
       color: #020f75;
       font-size: 2.5vmin;
+      font-weight: bold;
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .festivalday0928::after{
       content:"教師節";
       color: #020f75;
       font-size: 2.5vmin;
+            font-weight: bold;
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .festivalday1007::after{
       content:"勤永老師生日";
       color: #020f75;
       font-size: 2.5vmin;
+            font-weight: bold;
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .festivalday1010::after{
       content:"雙十國慶";
       color: #020f75;
       font-size: 2.5vmin;
+            font-weight: bold;
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .festivalday1025::after{
       content:"台灣光復節";
       color: #020f75;
       font-size: 2.5vmin;
+            font-weight: bold;
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .festivalday1031::after{
       content:"萬聖節";
       color: #020f75;
       font-size: 2.5vmin;
+            font-weight: bold;
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .festivalday1112::after{
       content:"中華文化復興節";
       color: #020f75;
       font-size: 2.5vmin;
+            font-weight: bold;
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .festivalday1224::after{
       content:"平安夜";
       color: #020f75;
       font-size: 2.5vmin;
+            font-weight: bold;
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .festivalday1225::after{
       content:"聖誕節";
       color: #020f75;
       font-size: 2.5vmin;
+            font-weight: bold;
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     /* 各節日變色 結束 */
