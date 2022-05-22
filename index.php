@@ -202,7 +202,7 @@
     /* 標題小毛玻璃文字效果 開始 */
     [data-title]{
       color: transparent;
-      -webkit-text-stroke: 1px lightslategray;
+      -webkit-text-stroke: 0.1px lightslategray;
       letter-spacing: 0.04em;
       flex-basis: 100%;
     }
@@ -539,13 +539,12 @@
       content:"情人節";
       color: #020f75;
       font-size: 2.5vmin;
-      /* 
       font-weight: bold;
       background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
       background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
       background-clip: text;
       -webkit-background-clip: text;
-      color: transparent; */
+      color: transparent;
     }
 
     .festivalday0228::after{
