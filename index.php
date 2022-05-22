@@ -465,7 +465,7 @@
 
     .table {
       width: 52.29vw;
-      height:73.5vh;
+      height:68.6vh;
       display: flex;
       flex-wrap: wrap;
       align-content: baseline;
@@ -476,8 +476,8 @@
     .table div {
       display: inline-block;
       width: 7.41vw;
-      height: 10.5vh;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      height: 9.8vh;
+      /* border: 1px solid rgba(255, 255, 255, 0.2); */
       box-sizing: border-box;
       text-align: center;
       /* line-height: 8vh; */
