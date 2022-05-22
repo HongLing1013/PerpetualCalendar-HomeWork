@@ -147,7 +147,7 @@
       /* width: 950px; */
       width: 70vw;
       /* height: 580px; */
-      height: 95vh;
+      height: 45vw;
       border-radius: 15px;
     }
     /* 毛玻璃外框 結束 */
@@ -788,7 +788,7 @@ switch ($month) {
         <aside>
           <!-- 左邊隨機圖 開始 -->
           <figure class="img">
-            <img src="./img/month<?=$month;?>-<?=rand(1, 2)?>.jpg" width="230vw" height="470vw">
+            <img src="./img/month<?=$month;?>-<?=rand(1, 2)?>.jpg" width="220vw" height="460vw">
           </figure>
           <!-- 左邊隨機圖 結束 -->
           <!-- 印出萬年曆標題 開始-->
