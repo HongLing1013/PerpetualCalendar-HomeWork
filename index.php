@@ -480,8 +480,8 @@
       border: 1px solid rgba(255, 255, 255, 0.2);
       box-sizing: border-box;
       text-align: center;
-      line-height: 8vh;
-      font-size: 3vmin;
+      /* line-height: 8vh; */
+      font-size: 3.5vmin;
     }
 
     .table>div:not(.weekend,.today){
@@ -529,10 +529,17 @@
     }
 
     /* 各節日變色 開始 */
-    .festivalday0101::before{
+    .festivalday0101::after{
       content:"元旦";
       color: #020f75;
-      /* font-size: 2vmin;
+      font-size: 2.5vmin;
+    }
+
+    .festivalday0214::after{
+      content:"情人節";
+      color: #020f75;
+      font-size: 2.5vmin;
+      /* 
       font-weight: bold;
       background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
       background: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
@@ -540,7 +547,109 @@
       -webkit-background-clip: text;
       color: transparent; */
     }
-    
+
+    .festivalday0228::after{
+      content:"和平紀念日";
+      color: #020f75;
+      font-size: 2.5vmin;
+    }
+
+    .festivalday0308::after{
+      content:"婦女節";
+      color: #020f75;
+      font-size: 2.5vmin;
+    }
+
+    .festivalday0314::after{
+      content:"白色情人節";
+      color: #020f75;
+      font-size: 2.5vmin;
+    }
+
+    .festivalday0329::after{
+      content:"青年節";
+      color: #020f75;
+      font-size: 2.5vmin;
+    }
+
+    .festivalday0401::after{
+      content:"愚人節";
+      color: #020f75;
+      font-size: 2.5vmin;
+    }
+
+    .festivalday0404::after{
+      content:"兒童節";
+      color: #020f75;
+      font-size: 2.5vmin;
+    }
+
+    .festivalday0501::after{
+      content:"勞動節";
+      color: #020f75;
+      font-size: 2.5vmin;
+    }
+
+    .festivalday0808::after{
+      content:"父親節";
+      color: #020f75;
+      font-size: 2.5vmin;
+    }
+
+    .festivalday0903::after{
+      content:"軍人節";
+      color: #020f75;
+      font-size: 2.5vmin;
+    }
+
+    .festivalday0928::after{
+      content:"教師節";
+      color: #020f75;
+      font-size: 2.5vmin;
+    }
+
+    .festivalday1007::after{
+      content:"勤永老師生日";
+      color: #020f75;
+      font-size: 2.5vmin;
+    }
+
+    .festivalday1010::after{
+      content:"雙十國慶";
+      color: #020f75;
+      font-size: 2.5vmin;
+    }
+
+    .festivalday1025::after{
+      content:"台灣光復節";
+      color: #020f75;
+      font-size: 2.5vmin;
+    }
+
+    .festivalday1031::after{
+      content:"萬聖節";
+      color: #020f75;
+      font-size: 2.5vmin;
+    }
+
+    .festivalday1112::after{
+      content:"中華文化復興節";
+      color: #020f75;
+      font-size: 2.5vmin;
+    }
+
+    .festivalday1224::after{
+      content:"平安夜";
+      color: #020f75;
+      font-size: 2.5vmin;
+    }
+
+    .festivalday1225::after{
+      content:"聖誕節";
+      color: #020f75;
+      font-size: 2.5vmin;
+    }
+
     /* 各節日變色 結束 */
 
     /* 萬年曆排版 結束 */
@@ -667,7 +776,7 @@ switch ($month) {
                 // $hol = ($k % 7 == 0 || $k % 7 == 6) ? 'weekend' : ""; //判定是否為假日
                 if (!empty($day)) {
                     $dayFormat = date("j", strtotime($day));
-                    echo "<div class='{$hol}'><div class='festivalday{$sday}'>{$dayFormat}</div></div>";
+                    echo "<div class='{$hol}'><div class='festivalday{$sday}'>{$dayFormat}<br></div></div>";
                 } else {
                     echo "<div class='{$hol}'></div>";
                 }
