@@ -830,9 +830,13 @@ switch ($month) {
         $today = date("Y-m-d"); //取值今天
         $lastWeekday = date("w", strtotime($lastDay)); //這個月最後一天是星期幾
         $dateHouse = [];
-        $sday = date("md" , strtotime($today));
-        $sday == date("md" , strtotime($today));
 
+        // 暫時註解調宣告的sday
+        // $sday = date("md" , strtotime($today));
+        // $sday == date("md" , strtotime($today));
+
+        // 給它一個陣列
+        $sday=['0101'=>'元旦','0214'=>'情人節','0808'=>'父親節'];
 
         for ($i = 0; $i < $firstWeekday; $i++) {
             $dateHouse[] = ""; //一號以前印空白
@@ -873,24 +877,57 @@ switch ($month) {
             <!-- 印出萬年曆內容 開始 -->
             <?php
             foreach ($dateHouse as $k => $day) {
-              
-                if ($day == $today) {
-                    $hol = 'today';
-                } else if ($k % 7 == 0 || $k % 7 == 6) {
-                    $hol = 'weekend';
-                }else{
-                    $hol = '';
-                }
-                
-                // $hol = ($k % 7 == 0 || $k % 7 == 6) ? 'weekend' : ""; //判定是否為假日
-                if (!empty($day)) {
-                    $sday = date("md" , strtotime($day)); //每一天都產生一個$sday變數
-                    $dayFormat = date("j", strtotime($day));
-                    echo "<div class='{$hol}'><div class='festivalday{$sday}'>{$dayFormat}<br></div></div>";
-                } else {
+              //只須要判斷今天,假日,平日
+              if ($day == $today) {
+                  $hol = 'today';
+              } else if ($k % 7 == 0 || $k % 7 == 6) {
+                  $hol = 'weekend';
+              }else{
+                  $hol = '';
+              }
+              // $hol = ($k % 7 == 0 || $k % 7 == 6) ? 'weekend' : ""; //判定是否為假日
+              if (!empty($day)) {
+                  $d = date("md" , strtotime($day)); 
+                  //在這邊判斷節日陣列
+                  if(!empty($sday[$d])){
+                  echo $sday[$d]; 
+                  $dayFormat = date("j", strtotime($day));
+                  //把節日變數$d帶入到class中
+                    echo "<div class='{$hol}'><div class='festivalday{$d}'>{$dayFormat}<br></div></div>";
+                  }else{
                     echo "<div class='{$hol}'></div>";
-                }
-            }
+                    }  
+              } 
+          }
+          
+            // foreach ($dateHouse as $k => $day) {
+
+            //     if ($day == $today) {
+            //         $hol = 'today';
+            //     } else if ($k % 7 == 0 || $k % 7 == 6) {
+            //         $hol = 'weekend';
+            //     }else{
+            //         $hol = '';
+            //     }
+                
+            //     // $hol = ($k % 7 == 0 || $k % 7 == 6) ? 'weekend' : ""; //判定是否為假日
+            //     if (!empty($day)) {
+            //         // $sday = date("md" , strtotime($day)); //每一天都產生一個$sday變數
+            //         $dayFormat = date("j", strtotime($day));
+            //         echo "<div class='{$hol}'><div class='festivalday{$sday}'>{$dayFormat}<br></div></div>";
+            //     } else {
+            //         echo "<div class='{$hol}'></div>";
+            //     }
+            // }
+
+            // if(!empty($day)){
+            //   $d=date("md",strtotime($day));
+            //   if(!empty($sday[$d])){
+            //     echo $sday[$d];
+            //   }else{
+            //     echo "";//一般日
+            //   }
+            // }
             ?>
             <!-- 印出萬年曆內容 結束 -->
 
