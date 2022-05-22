@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,13 +12,11 @@
       margin: 0;
       font-family: '華康流隸體';
     }
-
     /* 動態漸層背景 開始 */
     .bg {
       margin: 0;
       min-height: 100vh;
       background-color: #F5F5DC;
-
       /* 設定背景色塊 開始*/
       background-image:
         /* 	LightSkyBlue 淡藍 */
@@ -33,7 +30,6 @@
         /* 	Tomato 橘紅 */
         radial-gradient(closest-side, rgba(255, 99, 71, 1), rgba(255, 99, 71, 0));
       /* 設定背景色塊 結束*/
-
       /* 設定背景色塊大小 開始*/
       background-size:
         130vmax 130vmax,
@@ -42,7 +38,6 @@
         100vmax 100vmax,
         90vmax 90vmax;
       /* 設定背景色塊大小 結束*/
-
       /* 設定背景色塊的位子 開始*/
       background-position:
         -80vmax -80vmax,
@@ -51,14 +46,12 @@
         -30vmax -10vmax,
         50vmax 50vmax;
       /* 設定背景色塊的位子 結束*/
-
       /* 背景不重複 */
       background-repeat: no-repeat;
       /* 動畫設定 時長3秒 線性加速度 無限重複 */
       animation: 3s movement linear infinite;
     }
     /* 漸層背景 結束 */
-
     /* 背景模糊 開始 */
     .bg::after {
       content: '';
@@ -73,10 +66,8 @@
       -webkit-backdrop-filter: blur(10px);
     }
     /* 背景模糊結束 */
-
     /* 動態背景 開始 */
     @keyframes movement {
-
       0%,
       100% {
         background-size:
@@ -92,7 +83,6 @@
           -30vmax -10vmax,
           50vmax 50vmax;
       }
-
       25% {
         background-size:
           100vmax 100vmax,
@@ -107,7 +97,6 @@
           -40vmax -20vmax,
           40vmax 60vmax;
       }
-
       50% {
         background-size:
           80vmax 80vmax,
@@ -122,7 +111,6 @@
           20vmax 10vmax,
           30vmax 70vmax;
       }
-
       75% {
         background-size:
           90vmax 90vmax,
@@ -137,10 +125,8 @@
           -10vmax 10vmax,
           40vmax 60vmax;
       }
-
     }
     /* 動態背景 結束 */
-
     .box {
       position: relative;
       /* 因為body有偽元素 所以z-index要設定高一點 */
@@ -151,7 +137,6 @@
       align-items: center;
       flex-wrap: wrap;
     }
-
     /* 毛玻璃外框 開始 */
     .glass {
       position: relative;
@@ -162,7 +147,7 @@
       /* width: 950px; */
       width: 70vw;
       /* height: 580px; */
-      height: 80vh;
+      height: 95vh;
       border-radius: 15px;
     }
     /* 毛玻璃外框 結束 */
@@ -179,7 +164,7 @@
       /* width: 935px; */
       width: 98.5%;
       /* height: 65px; */
-      height: 12%;
+      height: 15%;
       background: rgba(255, 255, 255, 0.5);
       font-size: 9vmin;
       text-transform: uppercase;
@@ -189,7 +174,6 @@
       transition: all 0.8s ease-in-out;
     }
     /* 標題小毛玻璃 結束 */
-
     /* 標題小毛玻璃動態 開始 */
     .glass:hover::before {
       height: 4%;
@@ -198,16 +182,15 @@
       font-size: 4vmin;
     }
     /* 標題小毛玻璃動態 結束 */
-
     /* 標題小毛玻璃文字效果 開始 */
     [data-title]{
-      color: transparent;
-      -webkit-text-stroke: 0.1px lightslategray;
+      color: rgba(93, 71, 139, 0.2);
+      /* color: transparent; */
+      -webkit-text-stroke: 1px lightslategray;
       letter-spacing: 0.04em;
       flex-basis: 100%;
     }
     /* 標題小毛玻璃文字效果 結束 */
-
     /* 切換月份年份按鈕 開始 */
     .nav {
       /* padding: auto;
@@ -216,7 +199,6 @@
       justify-content: space-between;
       flex-basis: 100%;
     }
-
     /* 左邊前一年的按鈕 開始 */
     .nav1 {
       flex-basis: 10%;
@@ -224,7 +206,6 @@
       justify-content: center;
       margin-left: 3vw;
     }
-
     .nav1>a{
       display: flex;
       justify-content: center;
@@ -240,11 +221,9 @@
       background-size: 400%;
       text-transform: uppercase;
     }
-
     .nav1>a:hover{
       animation: animate 8s linear infinite;
     }
-
     @keyframes animate{
       0%{
           background-position: 0%;
@@ -253,7 +232,6 @@
           background-position: 400%;
       }
     }
-
     .nav1>a::before{
       top: -5px;
       left: -5px;
@@ -266,13 +244,11 @@
       opacity: -1;
       transition: 0.5s;
     }
-
     .nav1>a:hover::before{
       filter: blur(20px);
       opacity: 1;
     }
       /* 左邊前一年的按鈕 結束 */
-
     /* 左邊上個月的按鈕 開始 */
     .nav2 {
       flex-basis: 10%;
@@ -296,11 +272,9 @@
       background-size: 400%;
       text-transform: uppercase;
     }
-
     .nav2>a:hover{
       animation: animate 8s linear infinite;
     }
-
     @keyframes animate{
       0%{
         background-position: 0%;
@@ -309,7 +283,6 @@
         background-position: 400%;
       }
     }
-
     .nav2>a::before{
       top: -5px;
       left: -5px;
@@ -322,13 +295,11 @@
       opacity: -1;
       transition: 0.5s;
     }
-
     .nav2>a:hover::before{
       filter: blur(20px);
       opacity: 1;
     }
       /* 左邊上個月的按鈕 結束*/
-
     /* 右邊後一個月的按鈕 開始 */
     .nav3 {
       flex-basis: 10%;
@@ -385,7 +356,6 @@
         opacity: 1;
     }
       /* 右邊後一個月的按鈕 結束 */
-
       /* 右邊後一年的按鈕 開始 */
       .nav4 {
         flex-basis: 10%;
@@ -441,7 +411,6 @@
       }
       /* 右邊後一年的按鈕 結束 */
     /* 切換月份年份按鈕 結束 */
-
     /* 萬年曆排版 開始 */
     .wrapper {
       width: 60vw;
@@ -453,18 +422,15 @@
       flex-wrap: wrap;
       flex-basis: 100%;
     }
-
     aside {
       display: flex;
       justify-content: center;
     }
-
     .img{
       margin: 2vh 0;
     }
-
     .table {
-      width: 52.29vw;
+      width: 49vw;
       height:68.6vh;
       display: flex;
       flex-wrap: wrap;
@@ -472,10 +438,9 @@
       margin-left: 0.1vw;
       margin-top: 1vh;
     }
-
     .table div {
       display: inline-block;
-      width: 7.41vw;
+      width: 7vw;
       height: 9.8vh;
       /* border: 1px solid rgba(255, 255, 255, 0.2); */
       box-sizing: border-box;
@@ -483,7 +448,6 @@
       /* line-height: 8vh; */
       font-size: 3.5vmin;
     }
-
     .table>div:not(.weekend,.today){
       font-weight: bold;
       background: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
@@ -492,7 +456,6 @@
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .table div.header {
       background: rgba(0, 0, 0, 0.5);
       /* color: white; */
@@ -506,7 +469,6 @@
       -webkit-background-clip: text;
       color: transparent;
     }
-
     /* 六日變色 */
     .weekend {
       font-weight: bold;
@@ -516,7 +478,6 @@
       -webkit-background-clip: text;
       color: transparent;
     }
-
     /* 今日變色 */
     .today{
       line-height: 8vh;
@@ -527,7 +488,6 @@
       color: white;
       border-radius: 50%;
     }
-
     /* 各節日變色 開始 */
     .festivalday0101::after{
       content:"元旦";
@@ -540,7 +500,6 @@
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .festivalday0214::after{
       content:"情人節";
       color: #020f75;
@@ -552,7 +511,6 @@
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .festivalday0228::after{
       content:"和平紀念日";
       color: #020f75;
@@ -564,7 +522,6 @@
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .festivalday0308::after{
       content:"婦女節";
       color: #020f75;
@@ -576,7 +533,6 @@
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .festivalday0314::after{
       content:"白色情人節";
       color: #020f75;
@@ -588,7 +544,6 @@
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .festivalday0329::after{
       content:"青年節";
       color: #020f75;
@@ -600,7 +555,6 @@
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .festivalday0401::after{
       content:"愚人節";
       color: #020f75;
@@ -612,7 +566,6 @@
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .festivalday0404::after{
       content:"兒童節";
       color: #020f75;
@@ -624,7 +577,6 @@
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .festivalday0501::after{
       content:"勞動節";
       color: #020f75;
@@ -636,7 +588,6 @@
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .festivalday0808::after{
       content:"父親節";
       color: #020f75;
@@ -648,7 +599,6 @@
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .festivalday0903::after{
       content:"軍人節";
       color: #020f75;
@@ -660,7 +610,6 @@
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .festivalday0928::after{
       content:"教師節";
       color: #020f75;
@@ -672,7 +621,6 @@
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .festivalday1007::after{
       content:"勤永老師生日";
       color: #020f75;
@@ -684,7 +632,6 @@
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .festivalday1010::after{
       content:"雙十國慶";
       color: #020f75;
@@ -696,7 +643,6 @@
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .festivalday1025::after{
       content:"台灣光復節";
       color: #020f75;
@@ -708,7 +654,6 @@
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .festivalday1031::after{
       content:"萬聖節";
       color: #020f75;
@@ -720,7 +665,6 @@
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .festivalday1112::after{
       content:"中華文化復興節";
       color: #020f75;
@@ -732,7 +676,6 @@
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .festivalday1224::after{
       content:"平安夜";
       color: #020f75;
@@ -744,7 +687,6 @@
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .festivalday1225::after{
       content:"聖誕節";
       color: #020f75;
@@ -756,13 +698,10 @@
       -webkit-background-clip: text;
       color: transparent;
     }
-
     /* 各節日變色 結束 */
-
     /* 萬年曆排版 結束 */
   </style>
 </head>
-
 <?php
 // 取得上一個月跟下一個月份的參數
 if (isset($_GET['month'])) {
@@ -797,7 +736,6 @@ switch ($month) {
         $nextYear = $year;
 }
 ?>
-
 <!-- 漸層背景 開始 -->
 <body class="bg">
   <!-- 動態背景 開始 -->
@@ -816,10 +754,9 @@ switch ($month) {
       <section class="wrapper">
           <!-- 月份標題圖 開始 -->
           <span>
-            <img src="./header_img/<?=$month;?>.png" alt="<?=$month;?>" width="245vw" height="80vh">
+            <img src="./header_img/<?=$month;?>.png" alt="<?=$month;?>" width="60%" height="60%">
           </span>
           <!-- 月份標題圖 結束 -->
-
         <!-- 萬年曆內容參數設定 開始 -->
         <?php
         // 設定各項參數
@@ -830,39 +767,30 @@ switch ($month) {
         $today = date("Y-m-d"); //取值今天
         $lastWeekday = date("w", strtotime($lastDay)); //這個月最後一天是星期幾
         $dateHouse = [];
+        $sday = date("md" , strtotime($today));
+        $sday == date("md" , strtotime($today));
 
-        // 暫時註解調宣告的sday
-        // $sday = date("md" , strtotime($today));
-        // $sday == date("md" , strtotime($today));
-
-        // 給它一個陣列
-        $sday=['0101'=>'元旦','0214'=>'情人節','0808'=>'父親節'];
 
         for ($i = 0; $i < $firstWeekday; $i++) {
             $dateHouse[] = ""; //一號以前印空白
         }
-
         for ($i = 0; $i < $monthDays; $i++) {
             $date = date("Y-m-d", strtotime("+$i days", strtotime($firstDay)));
             //日期函數的年月日 換算成字串 字串印出來以後要+1
             $dateHouse[] = $date;
         }
-
         for ($i = 0; $i < (6 - $lastWeekday); $i++) {
             $dateHouse[] = ""; //最後一天以後印空白
         }
         ?>
         <!-- 萬年曆內容參數設定 結束 -->
-
         <!-- 萬年曆中間面板 開始 -->
         <aside>
-
           <!-- 左邊隨機圖 開始 -->
           <figure class="img">
-            <img src="./img/month<?=$month;?>-<?=rand(1, 2)?>.jpg" width="280vw" height="620vh">
+            <img src="./img/month<?=$month;?>-<?=rand(1, 2)?>.jpg" width="230vw" height="470vh">
           </figure>
           <!-- 左邊隨機圖 結束 -->
-
           <!-- 印出萬年曆標題 開始-->
           <div class="table">
             <div class='header'>Sun</div>
@@ -873,64 +801,31 @@ switch ($month) {
             <div class='header'>Fri</div>
             <div class='header'>Sat</div>
             <!-- 印出萬年曆標題 結束-->
-
             <!-- 印出萬年曆內容 開始 -->
             <?php
             foreach ($dateHouse as $k => $day) {
-              //只須要判斷今天,假日,平日
-              if ($day == $today) {
-                  $hol = 'today';
-              } else if ($k % 7 == 0 || $k % 7 == 6) {
-                  $hol = 'weekend';
-              }else{
-                  $hol = '';
-              }
-              // $hol = ($k % 7 == 0 || $k % 7 == 6) ? 'weekend' : ""; //判定是否為假日
-              if (!empty($day)) {
-                  $d = date("md" , strtotime($day)); 
-                  //在這邊判斷節日陣列
-                  if(!empty($sday[$d])){
-                  echo $sday[$d]; 
-                  $dayFormat = date("j", strtotime($day));
-                  //把節日變數$d帶入到class中
-                    echo "<div class='{$hol}'><div class='festivalday{$d}'>{$dayFormat}<br></div></div>";
-                  }else{
+
+                if ($day == $today) {
+                    $hol = 'today';
+                } else if ($k % 7 == 0 || $k % 7 == 6) {
+                    $hol = 'weekend';
+                } else if ($sday = date("md" , strtotime($day))){
+                  $hol = 'sday';
+                }else{
+                    $hol = '';
+                }
+
+                // $hol = ($k % 7 == 0 || $k % 7 == 6) ? 'weekend' : ""; //判定是否為假日
+                if (!empty($day)) {
+                    $sday = date("md" , strtotime($day)); //每一天都產生一個$sday變數
+                    $dayFormat = date("j", strtotime($day));
+                    echo "<div class='{$hol}'><div class='festivalday{$sday}'>{$dayFormat}<br></div></div>";
+                } else {
                     echo "<div class='{$hol}'></div>";
-                    }  
-              } 
-          }
-          
-            // foreach ($dateHouse as $k => $day) {
-
-            //     if ($day == $today) {
-            //         $hol = 'today';
-            //     } else if ($k % 7 == 0 || $k % 7 == 6) {
-            //         $hol = 'weekend';
-            //     }else{
-            //         $hol = '';
-            //     }
-                
-            //     // $hol = ($k % 7 == 0 || $k % 7 == 6) ? 'weekend' : ""; //判定是否為假日
-            //     if (!empty($day)) {
-            //         // $sday = date("md" , strtotime($day)); //每一天都產生一個$sday變數
-            //         $dayFormat = date("j", strtotime($day));
-            //         echo "<div class='{$hol}'><div class='festivalday{$sday}'>{$dayFormat}<br></div></div>";
-            //     } else {
-            //         echo "<div class='{$hol}'></div>";
-            //     }
-            // }
-
-            // if(!empty($day)){
-            //   $d=date("md",strtotime($day));
-            //   if(!empty($sday[$d])){
-            //     echo $sday[$d];
-            //   }else{
-            //     echo "";//一般日
-            //   }
-            // }
+                }
+            }
             ?>
             <!-- 印出萬年曆內容 結束 -->
-
           </div>
           <!-- 萬年曆結束 -->
         </aside>
@@ -951,5 +846,4 @@ switch ($month) {
   <!-- 動態背景 結束 -->
 </body>
 <!-- 漸層背景 結束 -->
-
 </html>
