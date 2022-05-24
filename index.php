@@ -10,7 +10,7 @@
       box-sizing: border-box;
       padding: 0;
       margin: 0;
-      font-family: '華康流隸體';
+      font-family: '華康流隸體','Segoe Print';
     }
     /* 動態漸層背景 開始 */
     .bg {
