@@ -432,7 +432,7 @@
       display: flex;
       justify-content: center;
     }
-    .img{
+    .hide-in-phone{
       margin: 2vh 0;
     }
     .table {
@@ -491,7 +491,7 @@
       /* width: 3vw;
       height: 35vh; */
       color: #3b41c5;
-      background: url(./gif/<?=rand(1, 13)?>.gif);
+      background: url(./img/today_background/<?=rand(1, 13)?>.gif);
       /* <?php echo "background: url(./gif/".rand(1, 13).".gif)"; ?> */
       background-size: 60%  70%;
       background-repeat:no-repeat;
@@ -710,28 +710,37 @@
     }
     /* 各節日變色 結束 */
     /* 萬年曆排版 結束 */
-    /* RWD 開始 */
-
-    /* Extra large devices */
-    @media(min-width: 1200px){
-
-    }
-
-    /* desktops */
-    @media(max-width: 992px){
-
-    }
-
-    /* tablets */
+    /* RWD響應式網頁 開始 */
+    /* tablets 平板 */
     @media(max-width: 768px){
 
     }
 
-    /* phones */
+    /* phones 手機 */
     @media(max-width: 576px){
+      .glass{
+        height: 90vw;
+      }
 
+      .table div.header{
+        height: 6vh;
+        font-size: 4vmin;
+      }
+      .table{
+        width: 49vw;
+        height: 84vw;
+      }
+      .table div {
+      width: 7vw;
+      height: 12vw;
+      }
+
+      /* 手機板時左邊的圖片消失 */
+      .hide-in-phone{
+        display: none;
+      }
     }
-    /* RWD 結束 */
+    /* RWD響應式網頁 結束 */
   </style>
 </head>
 <?php
@@ -788,7 +797,7 @@ switch ($month) {
       <section class="wrapper">
           <!-- 月份標題圖 開始 -->
           <span class="month-img">
-            <img src="./month/<?=$month;?>.png" alt="<?=$month;?>" width="25%" height="25%">
+            <img src="./img/month/<?=$month;?>.png" alt="<?=$month;?>" width="25%" height="25%">
             <!-- <img src="./header_img/<?=$month;?>.png" alt="<?=$month;?>" width="60%" height="60%"> -->
           </span>
           <!-- 月份標題圖 結束 -->
@@ -822,8 +831,8 @@ switch ($month) {
         <!-- 萬年曆中間面板 開始 -->
         <aside>
           <!-- 左邊隨機圖 開始 -->
-          <figure class="img">
-            <img src="./img/month<?=$month;?>-<?=rand(1, 2)?>.jpg" width="270vw" height="620vw">
+          <figure class="hide-in-phone">
+            <img src="./img/table_left_img/month<?=$month;?>-<?=rand(1, 2)?>.jpg" width="270vw" height="620vw">
           </figure>
           <!-- 左邊隨機圖 結束 -->
           <!-- 印出萬年曆標題 開始-->
