@@ -710,6 +710,28 @@
     }
     /* 各節日變色 結束 */
     /* 萬年曆排版 結束 */
+    /* RWD 開始 */
+
+    /* Extra large devices */
+    @media(min-width: 1200px){
+
+    }
+
+    /* desktops */
+    @media(max-width: 992px){
+
+    }
+
+    /* tablets */
+    @media(max-width: 768px){
+
+    }
+
+    /* phones */
+    @media(max-width: 576px){
+
+    }
+    /* RWD 結束 */
   </style>
 </head>
 <?php
