@@ -490,11 +490,12 @@
       font-size: 3vmin;
       /* width: 3vw;
       height: 35vh; */
-      background: url(./gif/<?=rand(1, 13);?>.gif);
-      background-repeat:no-repeat;
-      background-size: 60%  70%;
-      /* background: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%); */
       color: #3b41c5;
+      background-size: 60%  70%;
+      /* background: url(./gif/<?=rand(1, 13)?>.gif); */
+      /* <?php echo "background: url(./gif/".rand(1, 13).".gif)"; ?> */
+      background-repeat:no-repeat;
+      /* background: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%); */
       /* border-radius: 50%; */
     }
     /* 各節日變色 開始 */
