@@ -712,8 +712,10 @@
     /* 萬年曆排版 結束 */
     /* RWD響應式網頁 開始 */
     /* tablets 平板 */
-    @media(max-width: 768px){
-
+    @media(max-width: 1200px){
+      .hide-in-phone{
+        display: none;
+      }
     }
 
     /* phones 手機 */
