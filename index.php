@@ -147,7 +147,7 @@
       /* width: 950px; */
       width: 70vw;
       /* height: 580px; */
-      height: 45vw;
+      height: 40vw;
       border-radius: 15px;
     }
     /* 毛玻璃外框 結束 */
@@ -164,7 +164,7 @@
       /* width: 935px; */
       width: 98.5%;
       /* height: 65px; */
-      height: 15%;
+      height: 14%;
       background: rgba(255, 255, 255, 0.5);
       font-size: 9vmin;
       text-transform: uppercase;
@@ -191,6 +191,12 @@
       flex-basis: 100%;
     }
     /* 標題小毛玻璃文字效果 結束 */
+    /* 月份圖片 開始 */
+    .month-img{
+      text-align: center;
+    }
+    /* 月份圖片 結束 */
+
     /* 切換月份年份按鈕 開始 */
     .nav {
       /* padding: auto;
@@ -431,7 +437,7 @@
     }
     .table {
       width: 49vw;
-      height:49vw;
+      height:35vw;
       display: flex;
       flex-wrap: wrap;
       align-content: baseline;
@@ -441,7 +447,7 @@
     .table div {
       display: inline-block;
       width: 7vw;
-      height: 7vw;
+      height: 5vw;
       /* border: 1px solid rgba(255, 255, 255, 0.2); */
       box-sizing: border-box;
       text-align: center;
@@ -484,9 +490,12 @@
       font-size: 3vmin;
       /* width: 3vw;
       height: 35vh; */
-      background: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
-      color: white;
-      border-radius: 50%;
+      background-image: url(https://2.bp.blogspot.com/-EEHa84kpk-0/XgAOzQxjAXI/AAAAAAAWeSQ/A4p2JPsFCDI_gfhTmeFjtVN4SjHtmGNgwCLcBGAsYHQ/s1600/AW4133458_11.gif) ;
+      background-repeat:no-repeat;
+      background-size:60% 70%;
+      /* background: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%); */
+      color: #3b41c5;
+      /* border-radius: 50%; */
     }
     /* 各節日變色 開始 */
     .festivalday0101::after{
@@ -753,8 +762,9 @@ switch ($month) {
       <!-- 萬年曆樣式 開始 -->
       <section class="wrapper">
           <!-- 月份標題圖 開始 -->
-          <span>
-            <img src="./header_img/<?=$month;?>.png" alt="<?=$month;?>" width="60%" height="60%">
+          <span class="month-img">
+            <img src="./month/<?=$month;?>.png" alt="<?=$month;?>" width="25%" height="25%">
+            <!-- <img src="./header_img/<?=$month;?>.png" alt="<?=$month;?>" width="60%" height="60%"> -->
           </span>
           <!-- 月份標題圖 結束 -->
         <!-- 萬年曆內容參數設定 開始 -->
@@ -768,7 +778,7 @@ switch ($month) {
         $lastWeekday = date("w", strtotime($lastDay)); //這個月最後一天是星期幾
         $dateHouse = [];
         $sday = date("md" , strtotime($today));
-        $sday == date("md" , strtotime($today));
+        // $sday == date("md" , strtotime($today));
 
 
         for ($i = 0; $i < $firstWeekday; $i++) {
@@ -788,7 +798,7 @@ switch ($month) {
         <aside>
           <!-- 左邊隨機圖 開始 -->
           <figure class="img">
-            <img src="./img/month<?=$month;?>-<?=rand(1, 2)?>.jpg" width="220vw" height="460vw">
+            <img src="./img/month<?=$month;?>-<?=rand(1, 2)?>.jpg" width="270vw" height="620vw">
           </figure>
           <!-- 左邊隨機圖 結束 -->
           <!-- 印出萬年曆標題 開始-->
