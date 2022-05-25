@@ -10,7 +10,7 @@
       box-sizing: border-box;
       padding: 0;
       margin: 0;
-      font-family: '華康流隸體','Segoe Print';
+      font-family: '華康流隸體','金梅浪漫體','華康娃娃體','華康少女體','華康兒風體','華康流葉體','Segoe Print';
     }
     /* 動態漸層背景 開始 */
     .bg {
@@ -490,9 +490,9 @@
       font-size: 3vmin;
       /* width: 3vw;
       height: 35vh; */
-      background-image: url(https://2.bp.blogspot.com/-EEHa84kpk-0/XgAOzQxjAXI/AAAAAAAWeSQ/A4p2JPsFCDI_gfhTmeFjtVN4SjHtmGNgwCLcBGAsYHQ/s1600/AW4133458_11.gif) ;
+      background: url(./gif/<?=rand(1, 13);?>.gif);
       background-repeat:no-repeat;
-      background-size:60% 70%;
+      background-size: 60%  70%;
       /* background: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%); */
       color: #3b41c5;
       /* border-radius: 50%; */
@@ -751,8 +751,10 @@ switch ($month) {
   <main class="box">
   <!-- 切換月份 開始 -->
     <nav class="nav">
-    <span class="nav1">
-            <a href="index.php?year=<?=$prevYear - 1;?>&month=<?=$prevMonth + 1;?>">◄◄</a>
+      <!-- 去年 -->
+      <span class="nav1">
+        <a href="index.php?year=<?=$prevYear - 1;?>&month=<?=$prevMonth + 1;?>">◄◄</a>
+        <!-- 上個月 -->
           </span>
     <span class="nav2">
             <a href="index.php?year=<?=$prevYear;?>&month=<?=$prevMonth;?>">◄</a>
@@ -815,11 +817,11 @@ switch ($month) {
             <?php
             foreach ($dateHouse as $k => $day) {
 
-                if ($day == $today) {
+                if ($day == $today) {//判斷是否為今日
                     $hol = 'today';
-                } else if ($k % 7 == 0 || $k % 7 == 6) {
+                } else if ($k % 7 == 0 || $k % 7 == 6) {//判斷是否為假日
                     $hol = 'weekend';
-                } else if ($sday = date("md" , strtotime($day))){
+                } else if ($sday = date("md" , strtotime($day))){//判斷是否為節日
                   $hol = 'sday';
                 }else{
                     $hol = '';
@@ -844,9 +846,11 @@ switch ($month) {
       <!-- 萬年曆樣式 結束 -->
     </article>
     <!-- 毛玻璃外框 結束 -->
+              <!-- 下個月 -->
               <span class="nav3">
                 <a href="index.php?year=<?=$nextYear;?>&month=<?=$nextMonth;?>">►</a>
               </span>
+              <!-- 明年 -->
               <span class="nav4">
                 <a href="index.php?year=<?=$nextYear + 1;?>&month=<?=$nextMonth - 1;?>">►►</a>
               </span>
