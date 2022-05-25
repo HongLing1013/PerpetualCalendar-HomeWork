@@ -491,9 +491,9 @@
       /* width: 3vw;
       height: 35vh; */
       color: #3b41c5;
-      background-size: 60%  70%;
-      /* background: url(./gif/<?=rand(1, 13)?>.gif); */
+      background: url(./gif/<?=rand(1, 13)?>.gif);
       /* <?php echo "background: url(./gif/".rand(1, 13).".gif)"; ?> */
+      background-size: 60%  70%;
       background-repeat:no-repeat;
       /* background: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%); */
       /* border-radius: 50%; */
