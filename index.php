@@ -417,6 +417,12 @@
       }
       /* 右邊後一年的按鈕 結束 */
     /* 切換月份年份按鈕 結束 */
+    /* 左邊隨機圖片 開始 */
+        #left-img{
+        width: 16vw;
+        height: 32vw;
+      }
+    /* 左邊隨機圖片 結束 */
     /* 萬年曆排版 開始 */
     .wrapper {
       width: 60vw;
@@ -834,7 +840,7 @@ switch ($month) {
         <aside>
           <!-- 左邊隨機圖 開始 -->
           <figure class="hide-in-phone">
-            <img src="./img/table_left_img/month<?=$month;?>-<?=rand(1, 2)?>.jpg" width="270vw" height="620vw">
+            <img src="./img/table_left_img/month<?=$month;?>-<?=rand(1, 2)?>.jpg" id="left-img">
           </figure>
           <!-- 左邊隨機圖 結束 -->
           <!-- 印出萬年曆標題 開始-->
